@@ -167,7 +167,10 @@ int getAndPrintHeader (char *filename)
 		if (1 == rpmHeaderGetEntry(header, RPMTAG_NAME, &res_type, &res, &res_count))
 		    printRes(res_type, "name", res);
 		if (1 == rpmHeaderGetEntry(header, RPMTAG_EPOCH, &res_type, &res, &res_count))
-		    printf("<epoch>%s</epoch><!-- note: epoch tends to indicate that packager or upstream predicts incompetency of version-discipline -->\n", (char *) res);
+		{
+		    printRes(res_type, "epoch", res);
+		    printf("<!-- note: epoch tends to indicate that packager or upstream predicts incompetency of version-discipline -->\n", (char *) res);
+		}
 		if (1 == rpmHeaderGetEntry(header, RPMTAG_VERSION, &res_type, &res, &res_count))
 		    printRes(res_type, "version", res);
 		if (1 == rpmHeaderGetEntry(header, RPMTAG_RELEASE, &res_type, &res, &res_count))
