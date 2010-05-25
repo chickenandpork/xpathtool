@@ -18,6 +18,8 @@
       <xsl:copy-of select="description"/>
       <content:encoded><xsl:value-of select="description"/>&lt;br/&gt;
         &lt;ul&gt;
+          &lt;li&gt;file: &lt;a href="http://repos.chickenandporn.com/CentOS5.4/RPMS.3rdparty/<xsl:value-of select="arch"/>/<xsl:value-of select="filename"/>"&gt;
+http://repos.chickenandporn.com/CentOS5.4/RPMS.3rdparty/<xsl:value-of select="arch"/>/<xsl:value-of select="filename"/>&lt;/a&gt;&lt;/li&gt;
           &lt;li&gt;license: <xsl:value-of select="license"/>&lt;/li&gt;
           &lt;li&gt;built: <xsl:value-of select="buildTime"/> (<xsl:value-of select="rfc822BuildTime"/>)&lt;/li&gt;
           &lt;li&gt;size (bytes): <xsl:value-of select="size"/>&lt;/li&gt;
