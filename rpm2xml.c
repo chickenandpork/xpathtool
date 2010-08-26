@@ -17,6 +17,7 @@
 #include <rpm/rpmdb.h>
 #include <rpm/rpmds.h>
 #include <rpm/rpmts.h>
+#include <string.h>
 
 //char rfc3986Reserved[] = "%&'()*+,/:;<=>?@[]";
 char rfc3986Reserved[] = "%&'()*+,/:;<=>?@[]";
@@ -24,8 +25,12 @@ char hex[] = "0123456789abcdef";
 
 //void *bsearch(const void *key, const void *base, size_t nel, size_t width, int (*compar)(const void *, const void *));
 
-int rescomp (const char *k, const char *t)
+int rescomp (const void *_k, const void *_t)
 {
+    // added this manual shift-over to avoid some warnings.  I do expect the compiler to optimize this out.
+    char *k = (char *) _k;
+    char *t = (char *) _t;
+
     if (*k < *t) return -1;
     if (*k > *t) return 1;
     return 0;
@@ -36,7 +41,7 @@ int countRes (const char *s)
     int res = 0;
 
     for (; *s; s++)
-	if (NULL != bsearch (s, rfc3986Reserved, strlen(rfc3986Reserved), sizeof (char), rescomp))
+	if (NULL != bsearch (s, rfc3986Reserved, (size_t) strlen(rfc3986Reserved), sizeof (char), rescomp))
 	    res ++;
 
     return res;
@@ -81,7 +86,8 @@ void urlPrint(char *element, char *string)
     printf("<%s>", element);
     for (; *string; string++)
     {
-	if ((*string < 128) && (*string > 0) && (NULL == bsearch (string, rfc3986Reserved, strlen(rfc3986Reserved), sizeof (char), rescomp)))
+	// removed  (*string < 128) and-boolean because signed char is always <128)
+	if ((*string > 0) && (NULL == bsearch (string, rfc3986Reserved, (size_t) strlen(rfc3986Reserved), sizeof (char), rescomp)))
 	    buf[i++] = *string;
 	else { buf[i++] = '%'; buf[i++] = hex[*string / 16]; buf[i++] = hex[*string % 16]; }
 	if (i > (sizeof(buf)-3))
