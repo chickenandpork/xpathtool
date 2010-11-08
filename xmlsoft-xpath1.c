@@ -18,13 +18,14 @@
 #include <libxml/xpath.h>
 #include <libxml/xpathInternals.h>
 
-#if defined(LIBXML_XPATH_ENABLED) && defined(LIBXML_SAX1_ENABLED)
+#if defined(LIBXML_XPATH_ENABLED) // && defined(LIBXML_SAX1_ENABLED)
 
 
 static void usage(const char *name);
 int  execute_xpath_expression(const char* filename, const xmlChar* xpathExpr, const xmlChar* nsList);
 int  register_namespaces(xmlXPathContextPtr xpathCtx, const xmlChar* nsList);
 void print_xpath_nodes(xmlNodeSetPtr nodes, FILE* output);
+void print_xpath_node_values(xmlNodeSetPtr nodes, FILE* output);
 
 int 
 main(int argc, char **argv) {
@@ -97,6 +98,12 @@ execute_xpath_expression(const char* filename, const xmlChar* xpathExpr, const x
 	return(-1);
     }
 
+    /* process XIncludes to enable the inclusion of dynamic or reference documentation */
+    if (0 > xmlXIncludeProcess(doc)) {
+	fprintf(stderr, "Error: unable to process xincludes in file \"%s\"\n", filename);
+	return(-1);
+    }
+
     /* Create xpath evaluation context */
     xpathCtx = xmlXPathNewContext(doc);
     if(xpathCtx == NULL) {
@@ -123,7 +130,8 @@ execute_xpath_expression(const char* filename, const xmlChar* xpathExpr, const x
     }
 
     /* Print results */
-    print_xpath_nodes(xpathObj->nodesetval, stdout);
+    //print_xpath_nodes(xpathObj->nodesetval, stdout);
+    print_xpath_node_values(xpathObj->nodesetval, stdout);
 
     /* Cleanup */
     xmlXPathFreeObject(xpathObj);
@@ -199,7 +207,7 @@ register_namespaces(xmlXPathContextPtr xpathCtx, const xmlChar* nsList) {
  * @nodes:		the nodes set.
  * @output:		the output file handle.
  *
- * Prints the @nodes content to @output.
+ * Prints the @nodes names to @output.
  */
 void
 print_xpath_nodes(xmlNodeSetPtr nodes, FILE* output) {
@@ -238,6 +246,65 @@ print_xpath_nodes(xmlNodeSetPtr nodes, FILE* output) {
 	} else {
 	    cur = nodes->nodeTab[i];    
 	    fprintf(output, "= node \"%s\": type %d\n", cur->name, cur->type);
+	}
+    }
+}
+
+/**
+ * print_xpath_node_values:
+ * @nodes:		the nodes set.
+ * @output:		the output file handle.
+ *
+ * Prints the @nodes content to @output.
+ */
+void
+print_xpath_node_values(xmlNodeSetPtr nodes, FILE* output) {
+    xmlNodePtr cur;
+    int size;
+    int i;
+    
+    assert(output);
+    size = (nodes) ? nodes->nodeNr : 0;
+    
+    for(i = 0; i < size; ++i) {
+	assert(nodes->nodeTab[i]);
+	
+	switch (nodes->nodeTab[i]->type)
+	{
+	  case XML_NAMESPACE_DECL:
+	  {
+	    xmlNsPtr ns;
+	    
+	    ns = (xmlNsPtr)nodes->nodeTab[i];
+	    cur = (xmlNodePtr)ns->next;
+	    if(cur->ns) { 
+	        fprintf(output, "= namespace \"%s\"=\"%s\" for node %s:%s\n", 
+		    ns->prefix, ns->href, cur->ns->href, cur->name);
+	    } else {
+	        fprintf(output, "= namespace \"%s\"=\"%s\" for node %s\n", 
+		    ns->prefix, ns->href, cur->name);
+	    }
+	  }
+	    break;
+
+	  case XML_ATTRIBUTE_NODE:
+	    cur = nodes->nodeTab[i];   	    
+	    fprintf(output, "%s\n", cur->children->content);
+	    break;
+
+	  case XML_ELEMENT_NODE:
+	    cur = nodes->nodeTab[i];   	    
+	    fprintf(output, "%s\n", cur->children->content);
+	    break;
+
+	  case XML_TEXT_NODE:
+	    cur = nodes->nodeTab[i];   	    
+	    fprintf(output, "%s\n", cur->content);
+	    break;
+
+	  default:
+	    cur = nodes->nodeTab[i];    
+	    fprintf(output, "(not handled, nodetype %d)\n", cur->type); 
 	}
     }
 }
