@@ -1,6 +1,10 @@
-bin_PROGRAMS = xpathset rpm2xml
+bin_PROGRAMS = xpathget xpathset rpm2xml
 pkgdata_DATA = xml2rss.xsl
 EXTRA_DIST = xml2rss.xsl
+
+xpathget_SOURCES = xmlsoft-xpath1.c
+xpathget_CPPFLAGS = @XML_CPPFLAGS@
+xpathget_LDADD = @XML_LIBS@
 
 xpathset_SOURCES = xmlsoft-xpath2.c
 xpathset_CPPFLAGS = @XML_CPPFLAGS@
