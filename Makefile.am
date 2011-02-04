@@ -1,4 +1,7 @@
-bin_PROGRAMS = xpathget xpathset rpm2xml
+bin_PROGRAMS = xpathget xpathset
+if HAVE_RPMBUILD
+bin_PROGRAMS += rpm2xml
+endif
 pkgdata_DATA = xml2rss.xsl
 EXTRA_DIST = xml2rss.xsl
 
