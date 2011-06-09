@@ -6,7 +6,7 @@
   <xsl:template match="rpms">
     <rss version="2.0"><channel>
       <title>RPMs</title>
-    <xsl:apply-templates select="rpm"> <xsl:sort select="fileTime" order="descending"/> <xsl:sort select="name"/> <xsl:sort select="arch"/> </xsl:apply-templates>
+    <xsl:apply-templates select="rpm"> <xsl:sort select="buildTime" order="descending"/> <xsl:sort select="name"/> <xsl:sort select="arch"/> </xsl:apply-templates>
     </channel></rss>
   </xsl:template>
 
