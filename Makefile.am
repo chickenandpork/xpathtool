@@ -1,9 +1,10 @@
 bin_PROGRAMS = xpathget xpathset
+bin_SCRIPTS = check_adhoc
 if HAVE_RPMBUILD
 bin_PROGRAMS += rpm2xml
 endif
 pkgdata_DATA = xml2rss.xsl
-EXTRA_DIST = xml2rss.xsl
+EXTRA_DIST = xml2rss.xsl check_adhoc.in
 
 xpathget_SOURCES = xmlsoft-xpath1.c
 xpathget_CPPFLAGS = @XML_CPPFLAGS@
