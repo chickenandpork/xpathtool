@@ -294,12 +294,17 @@ print_xpath_node_values(xmlNodeSetPtr nodes, FILE* output) {
 
 	  case XML_ELEMENT_NODE:
 	    cur = nodes->nodeTab[i];   	    
-	    fprintf(output, "%s\n", cur->children->content);
+	    if (NULL == cur) fprintf(output, "(null)\n");
+	    else if (NULL == cur->children) fprintf(output, "c->(null)\n");
+	    else if (NULL == cur->children->content) fprintf(output, "c->c->(null)\n");
+	    else fprintf(output, "%s\n", cur->children->content);
 	    break;
 
 	  case XML_TEXT_NODE:
 	    cur = nodes->nodeTab[i];   	    
-	    fprintf(output, "%s\n", cur->content);
+	    if (NULL == cur) fprintf(output, "(null)\n");
+	    else if (NULL == cur->content) fprintf(output, "c->(null)\n");
+	    else fprintf(output, "%s\n", cur->content);
 	    break;
 
 	  default:
