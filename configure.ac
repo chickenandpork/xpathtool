@@ -82,6 +82,12 @@ AM_CONDITIONAL(DO_ASTYLE, test "x$ASTYLE" != "xmissing")
 AC_PATH_PROGS(RPMBUILD, [rpmbuild], [missing rpmbuild])
 AM_CONDITIONAL(HAVE_RPMBUILD, [test "x$RPMBUILD" != "xmissing rpmbuild"])
 
+if test "x$RPMBUILD" != 'xmissing rpmbuild'
+then
+AC_CHECK_LIB(rpm, rpmReadPackageFile,,AC_MSG_ERROR(rpm lib not found))
+AC_CHECK_LIB(rpm, rpmHeaderGetEntry,,AC_MSG_ERROR(rpm lib not found))
+AC_CHECK_HEADERS(rpm/rpmlib.h rpmlib.h)
+fi
 
 AC_PATH_PROGS(GIT, [git], [missing])
 AC_MSG_CHECKING([version agreement with git tag])
