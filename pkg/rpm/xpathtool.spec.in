@@ -29,7 +29,7 @@ Basic XPath-based tools to get and set values in XML files.  Implemented in Java
 Summary: XML XPath Manipulation Tools in C
 Group: Text/Manipulation
 
-%description java
+%description c
 Basic XPath-based tools to get and set values in XML files.  Implemented in C.
 
 
@@ -57,7 +57,15 @@ rm -fr %{buildroot}/%{_datadir}/@PACKAGE@/jars
 
 %files java
 # exported in java/Makefile.am
-%{_datadir}/@PACKAGE@/@PACKAGE@.jar
+%{_datadir}/@PACKAGE@/xpath.jar
+
+%files c
+# exported in src/Makefile.am
+%{_bindir}/check_adhoc
+%{_bindir}/rpm2xml
+%{_bindir}/xpathget
+%{_bindir}/xpathset
+%{_datadir}/@PACKAGE@/xml2rss.xsl
 
 
 %changelog
