@@ -1,13 +1,13 @@
-nodist_pkgdata_DATA = @PACKAGE@.jar
+nodist_pkgdata_DATA = xpath.jar
 
-CONFIG_CLEAN_FILES = @PACKAGE@.jar
+CONFIG_CLEAN_FILES = xpath.jar
 
 BUILDTMP=$(shell date +%s)
 
 JAVAROOT = bld
 
 
-@PACKAGE@.jar: ../java/@PACKAGE@.jar @GETOPTJAR@
+xpath.jar: ../java/@PACKAGE@.jar @GETOPTJAR@
 	@-rm -fr $(@D)/.workdir
 	@mkdir -p $(@D)/.workdir
 	@echo "Manifest-Version: 1.0" > $(@D)/.workdir/MANIFEST.MF
