@@ -195,7 +195,7 @@ AT_DATA([zeke-filter-one.xml], [<?xml version="1.0" encoding="UTF-8"?>
 </filterlist>
 ])
 
-AT_CHECK([/Users/allan.clark/src/cnp/tools/xpathset zeke-filter-one.xml "//filter[[@metricversion='21']]/@metricversion" 18],0, [<?xml version="1.0" encoding="UTF-8"?>
+AT_CHECK([$abs_srcdir/../src/xpathset zeke-filter-one.xml "//filter[[@metricversion='21']]/@metricversion" 18],0, [<?xml version="1.0" encoding="UTF-8"?>
 <filterlist>
   <filter majorversion="4" minorversion="0" name="Exclude known Queue Depth Violators" global="true" metricversion="18" containertype="ScsiItl" pregroupbyfilter="true">
     <metricexpression metricversion="21" containertype="ScsiItl">
@@ -223,7 +223,7 @@ AT_CHECK([/usr/bin/xmllint -format zeke-filter-one-test.xml ], 0, [<?xml version
 </filterlist>
 ],[ignore])
 
-AT_CHECK([/Users/allan.clark/src/cnp/tools/xpathset zeke-filter-one.xml "//*[[@containertype='ScsiItl' and @metricversion='21']]/@metricversion" 18 | sed -e 's/_FCX_/_FC8_/g'],0, [<?xml version="1.0" encoding="UTF-8"?>
+AT_CHECK([$abs_srcdir/../src/xpathset zeke-filter-one.xml "//*[[@containertype='ScsiItl' and @metricversion='21']]/@metricversion" 18 | sed -e 's/_FCX_/_FC8_/g'],0, [<?xml version="1.0" encoding="UTF-8"?>
 <filterlist>
   <filter majorversion="4" minorversion="0" name="Exclude known Queue Depth Violators" global="true" metricversion="18" containertype="ScsiItl" pregroupbyfilter="true">
     <metricexpression metricversion="18" containertype="ScsiItl">
