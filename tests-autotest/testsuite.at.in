@@ -1,0 +1,26 @@
+AT_INIT()
+
+AT_SETUP(...)
+dnl      ---
+
+AT_DATA([janreinmuth.txt],[
+])
+
+AT_CHECK([cat janreinmuth.txt | java -jar $abs_srcdir/../convjars/@PACKAGE@.jar], 0, [
+],[])
+
+AT_CLEANUP()
+
+
+
+AT_SETUP(Doxygen confirmation of marked-up content)
+dnl      -----------------------------------------
+
+AT_CHECK([if test @DOXYGEN@ = missing ; then exit 77; fi])
+AT_CHECK([make -C $abs_srcdir/.. doc], 0, [ignore],[stderr])
+dnl used to put the errors at the bottom of the output
+AT_CHECK([cat stderr], 0, [],[])
+
+AT_CLEANUP()
+
+
