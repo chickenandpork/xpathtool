@@ -8,16 +8,16 @@ dnl      -----------------
 AT_DATA([EDD_TEXT.xml],[<?xml version="1.0" standalone="yes"?>
 <PersistedData>
   <Version>1</Version>
-  <!-- 0 (default) no debug messages. 1 to output some debug messages. -->
+@XMLLINTINDENT@<!-- 0 (default) no debug messages. 1 to output some debug messages. -->
   <Debug debug-level="0">
-  <!-- Each device can optionally override this model setting -->
+@XMLLINTINDENT@<!-- Each device can optionally override this model setting -->
     <Overrides>
       <Override device-name="DEVICE_SERIAL" debug-level="1"/>
     </Overrides>
   </Debug>
-  <!-- ScanPeriod element defines scan period in seconds.  The driver reads this setting only from the generic file. Default is 60.  Set this to be 30 minutes to reduce load -->
+@XMLLINTINDENT@<!-- ScanPeriod element defines scan period in seconds.  The driver reads this setting only from the generic file. Default is 60.  Set this to be 30 minutes to reduce load -->
   <ScanPeriod>1800</ScanPeriod>
-  <!-- ScanTasks element defines a list of tasks performed during scan cycles -->
+@XMLLINTINDENT@<!-- ScanTasks element defines a list of tasks performed during scan cycles -->
   <ScanTasks>
     <ScanTask name="XYZVersionSearch" file="XYZDATADIR/buildid.txt" file-type="actual-name" file-attribute="all-files" cycle="1">
       <Actions>
@@ -36,16 +36,16 @@ AT_CHECK([/usr/bin/xmllint -noout EDD_NEW.xml], 0,[ignore],[ignore])
 AT_CHECK([/usr/bin/xmllint -format EDD_NEW.xml], 0,[<?xml version="1.0" encoding="UTF-8"?>
 <PersistedData>
   <Version>1</Version>
-  <!-- 0 (default) no debug messages. 1 to output some debug messages. -->
+@XMLLINTINDENT@<!-- 0 (default) no debug messages. 1 to output some debug messages. -->
   <Debug debug-level="0">
-    <!-- Each device can optionally override this model setting -->
+@XMLLINTINDENT@@XMLLINTINDENT@<!-- Each device can optionally override this model setting -->
     <Overrides>
       <Override debug-level="1" device-name="DEVICE_SERIAL"/>
     </Overrides>
   </Debug>
-  <!-- ScanPeriod element defines scan period in seconds.  The driver reads this setting only from the generic file. Default is 60.  Set this to be 30 minutes to reduce load -->
+@XMLLINTINDENT@<!-- ScanPeriod element defines scan period in seconds.  The driver reads this setting only from the generic file. Default is 60.  Set this to be 30 minutes to reduce load -->
   <ScanPeriod>1800</ScanPeriod>
-  <!-- ScanTasks element defines a list of tasks performed during scan cycles -->
+@XMLLINTINDENT@<!-- ScanTasks element defines a list of tasks performed during scan cycles -->
   <ScanTasks>
     <ScanTask cycle="1" file="bark" file-attribute="all-files" file-type="actual-name" name="XYZVersionSearch">
       <Actions>
@@ -64,16 +64,16 @@ AT_CHECK([/usr/bin/xmllint -noout EDD_NEW.xml], 0,[ignore],[ignore])
 AT_CHECK([/usr/bin/xmllint -format EDD_NEW.xml], 0,[<?xml version="1.0" encoding="UTF-8"?>
 <PersistedData>
   <Version>1</Version>
-  <!-- 0 (default) no debug messages. 1 to output some debug messages. -->
+@XMLLINTINDENT@<!-- 0 (default) no debug messages. 1 to output some debug messages. -->
   <Debug debug-level="0">
-    <!-- Each device can optionally override this model setting -->
+@XMLLINTINDENT@@XMLLINTINDENT@<!-- Each device can optionally override this model setting -->
     <Overrides>
       <Override debug-level="1" device-name="DEVICE_SERIAL"/>
     </Overrides>
   </Debug>
-  <!-- ScanPeriod element defines scan period in seconds.  The driver reads this setting only from the generic file. Default is 60.  Set this to be 30 minutes to reduce load -->
+@XMLLINTINDENT@<!-- ScanPeriod element defines scan period in seconds.  The driver reads this setting only from the generic file. Default is 60.  Set this to be 30 minutes to reduce load -->
   <ScanPeriod>1800</ScanPeriod>
-  <!-- ScanTasks element defines a list of tasks performed during scan cycles -->
+@XMLLINTINDENT@<!-- ScanTasks element defines a list of tasks performed during scan cycles -->
   <ScanTasks>
     <ScanTask cycle="1" file="check" file-attribute="all-files" file-type="actual-name" name="XYZVersionSearch">
       <Actions>
@@ -93,16 +93,16 @@ AT_CHECK([/usr/bin/xmllint -noout EDD_NEW.xml], 0,[ignore],[ignore])
 AT_CHECK([/usr/bin/xmllint -format EDD_NEW.xml], 0,[<?xml version="1.0" encoding="UTF-8"?>
 <PersistedData>
   <Version>1</Version>
-  <!-- 0 (default) no debug messages. 1 to output some debug messages. -->
+@XMLLINTINDENT@<!-- 0 (default) no debug messages. 1 to output some debug messages. -->
   <Debug debug-level="0">
-    <!-- Each device can optionally override this model setting -->
+@XMLLINTINDENT@@XMLLINTINDENT@<!-- Each device can optionally override this model setting -->
     <Overrides>
       <Override debug-level="1" device-name="DEVICE_SERIAL"/>
     </Overrides>
   </Debug>
-  <!-- ScanPeriod element defines scan period in seconds.  The driver reads this setting only from the generic file. Default is 60.  Set this to be 30 minutes to reduce load -->
+@XMLLINTINDENT@<!-- ScanPeriod element defines scan period in seconds.  The driver reads this setting only from the generic file. Default is 60.  Set this to be 30 minutes to reduce load -->
   <ScanPeriod>1800</ScanPeriod>
-  <!-- ScanTasks element defines a list of tasks performed during scan cycles -->
+@XMLLINTINDENT@<!-- ScanTasks element defines a list of tasks performed during scan cycles -->
   <ScanTasks>
     <ScanTask cycle="1" file="check" file-attribute="all-files" file-type="actual-name" name="XYZVersionSearch">
       <Actions>
@@ -464,16 +464,16 @@ dnl      -----------------
 AT_DATA([EDD_TEXT.xml],[<?xml version="1.0" standalone="yes"?>
 <PersistedData>
   <Version>1</Version>
-  <!-- 0 (default) no debug messages. 1 to output some debug messages. -->
+@XMLLINTINDENT@<!-- 0 (default) no debug messages. 1 to output some debug messages. -->
   <Debug debug-level="0">
-    <!-- Each device can optionally override this model setting -->
+@XMLLINTINDENT@@XMLLINTINDENT@<!-- Each device can optionally override this model setting -->
     <Overrides>
       <Override device-name="DEVICE_SERIAL" debug-level="1"/>
     </Overrides>
   </Debug>
-  <!-- ScanPeriod element defines scan period in seconds.  The driver reads this setting only from the generic file. Default is 60.  Set this to be 30 minutes to reduce load -->
+@XMLLINTINDENT@<!-- ScanPeriod element defines scan period in seconds.  The driver reads this setting only from the generic file. Default is 60.  Set this to be 30 minutes to reduce load -->
   <ScanPeriod>1800</ScanPeriod>
-  <!-- ScanTasks element defines a list of tasks performed during scan cycles -->
+@XMLLINTINDENT@<!-- ScanTasks element defines a list of tasks performed during scan cycles -->
   <ScanTasks>
     <ScanTask name="test1" file="XYZDATADIR/buildid.txt" file-type="actual-name" file-attribute="all-files" cycle="1">
       <Actions>
@@ -500,16 +500,16 @@ AT_CHECK([/usr/bin/xmllint -noout EDD_NEW.xml], 0,[ignore],[ignore])
 AT_CHECK([/usr/bin/xmllint -format EDD_NEW.xml], 0,[<?xml version="1.0" encoding="UTF-8"?>
 <PersistedData>
   <Version>1</Version>
-  <!-- 0 (default) no debug messages. 1 to output some debug messages. -->
+@XMLLINTINDENT@<!-- 0 (default) no debug messages. 1 to output some debug messages. -->
   <Debug debug-level="0">
-    <!-- Each device can optionally override this model setting -->
+@XMLLINTINDENT@@XMLLINTINDENT@<!-- Each device can optionally override this model setting -->
     <Overrides>
       <Override debug-level="1" device-name="DEVICE_SERIAL"/>
     </Overrides>
   </Debug>
-  <!-- ScanPeriod element defines scan period in seconds.  The driver reads this setting only from the generic file. Default is 60.  Set this to be 30 minutes to reduce load -->
+@XMLLINTINDENT@<!-- ScanPeriod element defines scan period in seconds.  The driver reads this setting only from the generic file. Default is 60.  Set this to be 30 minutes to reduce load -->
   <ScanPeriod>1800</ScanPeriod>
-  <!-- ScanTasks element defines a list of tasks performed during scan cycles -->
+@XMLLINTINDENT@<!-- ScanTasks element defines a list of tasks performed during scan cycles -->
   <ScanTasks>
     <ScanTask cycle="1" file="replacementpathname" file-attribute="all-files" file-type="actual-name" name="test1">
       <Actions>
@@ -536,16 +536,16 @@ AT_CHECK([/usr/bin/xmllint -noout EDD_NEW.xml], 0,[ignore],[ignore])
 AT_CHECK([/usr/bin/xmllint -format EDD_NEW.xml], 0,[<?xml version="1.0" encoding="UTF-8"?>
 <PersistedData>
   <Version>1</Version>
-  <!-- 0 (default) no debug messages. 1 to output some debug messages. -->
+@XMLLINTINDENT@<!-- 0 (default) no debug messages. 1 to output some debug messages. -->
   <Debug debug-level="0">
-    <!-- Each device can optionally override this model setting -->
+@XMLLINTINDENT@@XMLLINTINDENT@<!-- Each device can optionally override this model setting -->
     <Overrides>
       <Override debug-level="1" device-name="DEVICE_SERIAL"/>
     </Overrides>
   </Debug>
-  <!-- ScanPeriod element defines scan period in seconds.  The driver reads this setting only from the generic file. Default is 60.  Set this to be 30 minutes to reduce load -->
+@XMLLINTINDENT@<!-- ScanPeriod element defines scan period in seconds.  The driver reads this setting only from the generic file. Default is 60.  Set this to be 30 minutes to reduce load -->
   <ScanPeriod>1800</ScanPeriod>
-  <!-- ScanTasks element defines a list of tasks performed during scan cycles -->
+@XMLLINTINDENT@<!-- ScanTasks element defines a list of tasks performed during scan cycles -->
   <ScanTasks>
     <ScanTask cycle="1" file="bark" file-attribute="all-files" file-type="actual-name" name="test1">
       <Actions>
@@ -572,16 +572,16 @@ AT_CHECK([/usr/bin/xmllint -noout EDD_NEW.xml], 0,[ignore],[ignore])
 AT_CHECK([/usr/bin/xmllint -format EDD_NEW.xml], 0,[<?xml version="1.0" encoding="UTF-8"?>
 <PersistedData>
   <Version>1</Version>
-  <!-- 0 (default) no debug messages. 1 to output some debug messages. -->
+@XMLLINTINDENT@<!-- 0 (default) no debug messages. 1 to output some debug messages. -->
   <Debug debug-level="0">
-    <!-- Each device can optionally override this model setting -->
+@XMLLINTINDENT@@XMLLINTINDENT@<!-- Each device can optionally override this model setting -->
     <Overrides>
       <Override debug-level="1" device-name="DEVICE_SERIAL"/>
     </Overrides>
   </Debug>
-  <!-- ScanPeriod element defines scan period in seconds.  The driver reads this setting only from the generic file. Default is 60.  Set this to be 30 minutes to reduce load -->
+@XMLLINTINDENT@<!-- ScanPeriod element defines scan period in seconds.  The driver reads this setting only from the generic file. Default is 60.  Set this to be 30 minutes to reduce load -->
   <ScanPeriod>1800</ScanPeriod>
-  <!-- ScanTasks element defines a list of tasks performed during scan cycles -->
+@XMLLINTINDENT@<!-- ScanTasks element defines a list of tasks performed during scan cycles -->
   <ScanTasks>
     <ScanTask cycle="1" file="check" file-attribute="all-files" file-type="actual-name" name="test1">
       <Actions>
