@@ -1,4 +1,5 @@
 nodist_pkgdata_JAVA = XPathTool.java XPathSet.java XPathSub.java XPathException.java NoDocumentException.java
+nodist_pkgdata_JAVA += version.java
 nodist_pkgdata_DATA = $(subdir).jar
 faejavadir = @faehome@/@PACKAGE@
 faejava_DATA = $(subdir).jar
