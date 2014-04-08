@@ -76,7 +76,10 @@ AC_DEFUN([SVN_FIND_JDK],
       JRE_LIB_DIR="$JDK/jre/lib"
   fi
 
-  if test "$os_arch" = "Darwin" && test -d "/Library/Java//JavaVirtualMachines/1.6.0_29-b11-402.jdk/Contents/Home/include"; then
+  if test "$os_arch" = "Darwin" && test -f "/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/include/jni.h"; then
+    dnl Java=1.8.0, like 1.7.1, hides the Home holding include/jni.h
+    JDK="/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home"
+  elif test "$os_arch" = "Darwin" && test -f "/Library/Java//JavaVirtualMachines/1.6.0_29-b11-402.jdk/Contents/Home/include/jni.h"; then
     dnl Java=1.7.1 hides the Home holding include/jni.h in a different precise path (ugh)
     JDK="/Library/Java/JavaVirtualMachines/1.6.0_29-b11-402.jdk/Contents/Home"
   fi
