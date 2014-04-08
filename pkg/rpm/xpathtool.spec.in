@@ -41,7 +41,6 @@ Basic XPath-based tools to get and set values in XML files.  Implemented in C.
 
 %install
 make install DESTDIR=%{buildroot}
-rm %{buildroot}/%{_datadir}/@PACKAGE@/java.class
 rm %{buildroot}/%{_datadir}/@PACKAGE@/java.jar
 rm -fr %{buildroot}/%{_datadir}/@PACKAGE@/jars
 
