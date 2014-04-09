@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classorg_1_1smallfoot_1_1xpath_1_1NoDocumentException" kind="class" prot="public">
+    <compoundname>org::smallfoot::xpath::NoDocumentException</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">XPathException</basecompoundref>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1xpath_1_1NoDocumentException_1ae588def084cf6230b1c1eb88e438a6ea" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>NoDocumentException</definition>
+        <argsstring>(String m)</argsstring>
+        <name>NoDocumentException</name>
+        <param>
+          <type>String</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/java/NoDocumentException.java" line="4" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/NoDocumentException.java" bodystart="4" bodyend="4"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="15">
+        <label>XPathException</label>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>NoDocumentException</label>
+        <link refid="classorg_1_1smallfoot_1_1xpath_1_1NoDocumentException"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Exception</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="18">
+        <label>XPathException</label>
+        <childnode refid="19" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>NoDocumentException</label>
+        <link refid="classorg_1_1smallfoot_1_1xpath_1_1NoDocumentException"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>Exception</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/allan.clark/src/xpathtool/java/NoDocumentException.java" line="3" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/NoDocumentException.java" bodystart="3" bodyend="5"/>
+    <listofallmembers>
+      <member refid="classorg_1_1smallfoot_1_1xpath_1_1NoDocumentException_1ae588def084cf6230b1c1eb88e438a6ea" prot="package" virt="non-virtual"><scope>org::smallfoot::xpath::NoDocumentException</scope><name>NoDocumentException</name></member>
+      <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathException_1ae3aedf713b3c2f9e20ef4f7c2494ca2c" prot="package" virt="non-virtual"><scope>org::smallfoot::xpath::NoDocumentException</scope><name>XPathException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

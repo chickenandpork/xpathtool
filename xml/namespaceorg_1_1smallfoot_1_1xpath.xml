@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespaceorg_1_1smallfoot_1_1xpath" kind="namespace">
+    <compoundname>org::smallfoot::xpath</compoundname>
+    <innerclass refid="classorg_1_1smallfoot_1_1xpath_1_1NoDocumentException" prot="public">org::smallfoot::xpath::NoDocumentException</innerclass>
+    <innerclass refid="classorg_1_1smallfoot_1_1xpath_1_1version" prot="public">org::smallfoot::xpath::version</innerclass>
+    <innerclass refid="classorg_1_1smallfoot_1_1xpath_1_1XPathException" prot="package">org::smallfoot::xpath::XPathException</innerclass>
+    <innerclass refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSet" prot="public">org::smallfoot::xpath::XPathSet</innerclass>
+    <innerclass refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSub" prot="public">org::smallfoot::xpath::XPathSub</innerclass>
+    <innerclass refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool" prot="public">org::smallfoot::xpath::XPathTool</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/allan.clark/src/xpathtool/java/NoDocumentException.java" line="1" column="1"/>
+  </compounddef>
+</doxygen>

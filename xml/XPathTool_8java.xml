@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="XPathTool_8java" kind="file">
+    <compoundname>XPathTool.java</compoundname>
+    <innerclass refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool" prot="public">org::smallfoot::xpath::XPathTool</innerclass>
+    <innernamespace refid="namespaceorg_1_1smallfoot_1_1xpath">org::smallfoot::xpath</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/allan.clark/src/xpathtool/java/XPathTool.java"/>
+  </compounddef>
+</doxygen>

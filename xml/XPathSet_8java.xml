@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="XPathSet_8java" kind="file">
+    <compoundname>XPathSet.java</compoundname>
+    <innerclass refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSet" prot="public">org::smallfoot::xpath::XPathSet</innerclass>
+    <innernamespace refid="namespaceorg_1_1smallfoot_1_1xpath">org::smallfoot::xpath</innernamespace>
+    <innernamespace refid="namespaceorg_1_1w3c_1_1dom">org::w3c::dom</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/allan.clark/src/xpathtool/java/XPathSet.java"/>
+  </compounddef>
+</doxygen>

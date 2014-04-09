@@ -1,0 +1,337 @@
+\section{X\-Path\-Tool Class Reference}
+\label{classorg_1_1smallfoot_1_1xpath_1_1XPathTool}\index{X\-Path\-Tool@{X\-Path\-Tool}}
+
+
+\doxyref{X\-Path\-Tool}{p.}{classorg_1_1smallfoot_1_1xpath_1_1XPathTool} is a relatively uncomplicated wrapper for an X\-Path action\-: it doesn't know what you're doing, and doesn't assume you'll do things in a specific order, but tries to stop you from making really silly errors like saving or searching an unloaded file.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf X\-Path\-Tool} (String xml\-File)
+\begin{DoxyCompactList}\small\item\em Class Constructor to create with an initial file to load. \end{DoxyCompactList}\item 
+{\bf X\-Path\-Tool} ()\label{classorg_1_1smallfoot_1_1xpath_1_1XPathTool_a78c4db4e609847477447aab80aaa97d6}
+
+\begin{DoxyCompactList}\small\item\em Class Constructor with no initial file. \end{DoxyCompactList}\item 
+void {\bf load} (String xml\-File)
+\begin{DoxyCompactList}\small\item\em Wrapper to just load the file, spitting out exceptions and stacks as they occur. \end{DoxyCompactList}\item 
+void {\bf save} (String out)
+\begin{DoxyCompactList}\small\item\em Wrapper to just save the file, spitting out exceptions and stacks as they occur. \end{DoxyCompactList}\item 
+Object {\bf search} (String expression, Q\-Name return\-Type)  throws org.\-smallfoot.\-xpath.\-No\-Document\-Exception     
+\begin{DoxyCompactList}\small\item\em Search the current X\-M\-L Document for a match, returning a list of matching nodes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int {\bf set\-Attr} (Node\-List nodelist, String replacement)
+\begin{DoxyCompactList}\small\item\em Consume a list of matches, and for each node (entity or attribute) replace the current value. \end{DoxyCompactList}\item 
+static int {\bf sub\-Attr} (Node\-List nodelist, String edit\-Match, String edit\-Replace, boolean global)
+\begin{DoxyCompactList}\small\item\em Consume a list of matches, and for each node (entity or attribute) make a Strong.\-replace\-First() or a String.\-replace\-All() \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf \-\_\-load} (String xml\-File)  throws javax.\-xml.\-parsers.\-Parser\-Configuration\-Exception, org.\-xml.\-sax.\-S\-A\-X\-Exception, java.\-io.\-I\-O\-Exception     
+\begin{DoxyCompactList}\small\item\em Open a file. \end{DoxyCompactList}\item 
+void {\bf \-\_\-save} (String xml\-File)  throws javax.\-xml.\-transform.\-Transformer\-Configuration\-Exception, java.\-io.\-File\-Not\-Found\-Exception, javax.\-xml.\-transform.\-Transformer\-Exception, org.\-smallfoot.\-xpath.\-No\-Document\-Exception     
+\begin{DoxyCompactList}\small\item\em Save the current X\-M\-L Document to a new file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+org.\-w3c.\-dom.\-Document {\bfseries xml\-Document}\label{classorg_1_1smallfoot_1_1xpath_1_1XPathTool_ad25ef6220eb54575157ab063bc63a0f0}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{X\-Path\-Tool}{p.}{classorg_1_1smallfoot_1_1xpath_1_1XPathTool} is a relatively uncomplicated wrapper for an X\-Path action\-: it doesn't know what you're doing, and doesn't assume you'll do things in a specific order, but tries to stop you from making really silly errors like saving or searching an unloaded file. 
+
+Definition at line 17 of file X\-Path\-Tool.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{org\-::smallfoot\-::xpath\-::\-X\-Path\-Tool@{org\-::smallfoot\-::xpath\-::\-X\-Path\-Tool}!X\-Path\-Tool@{X\-Path\-Tool}}
+\index{X\-Path\-Tool@{X\-Path\-Tool}!org::smallfoot::xpath::XPathTool@{org\-::smallfoot\-::xpath\-::\-X\-Path\-Tool}}
+\subsubsection[{X\-Path\-Tool}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\-Path\-Tool} (
+\begin{DoxyParamCaption}
+\item[{String}]{xml\-File}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classorg_1_1smallfoot_1_1xpath_1_1XPathTool_a8627e2060c614bb6f468d158b66c20b8}
+
+
+Class Constructor to create with an initial file to load. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\-File} & File to load at start\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\doxyref{load(\-String)}{p.}{classorg_1_1smallfoot_1_1xpath_1_1XPathTool_a06e5248d8619f00173d9794f30966dc3} 
+\end{DoxySeeAlso}
+
+
+Definition at line 28 of file X\-Path\-Tool.\-java.
+
+
+
+References X\-Path\-Tool.\-load().
+
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{classorg_1_1smallfoot_1_1xpath_1_1XPathTool_a8627e2060c614bb6f468d158b66c20b8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{org\-::smallfoot\-::xpath\-::\-X\-Path\-Tool@{org\-::smallfoot\-::xpath\-::\-X\-Path\-Tool}!\-\_\-load@{\-\_\-load}}
+\index{\-\_\-load@{\-\_\-load}!org::smallfoot::xpath::XPathTool@{org\-::smallfoot\-::xpath\-::\-X\-Path\-Tool}}
+\subsubsection[{\-\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}void \-\_\-load (
+\begin{DoxyParamCaption}
+\item[{String}]{xml\-File}
+\end{DoxyParamCaption}
+) throws javax.\-xml.\-parsers.\-Parser\-Configuration\-Exception, org.\-xml.\-sax.\-S\-A\-X\-Exception, java.\-io.\-I\-O\-Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{classorg_1_1smallfoot_1_1xpath_1_1XPathTool_adc3a8f6eb0246c78615de6cc346d4f99}
+
+
+Open a file. 
+
+This is actually a wrapper for the complex usage of javax.\-xml.\-parsers.\-Document\-Builder\-Factory to find a singleton to instantiate a document from a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\-File} & file to load \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em java.\-io.\-I\-O\-Exception} & on issues loading the file given as a parameter \\
+\hline
+{\em javax.\-xml.\-parsers.\-Parser\-Configuration\-Exception} & when the javax.\-xml.\-parsers.\-Document\-Builder\-Factory is butchered \\
+\hline
+{\em org.\-xml.\-sax.\-S\-A\-X\-Exception} & on parsing issues \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 50 of file X\-Path\-Tool.\-java.
+
+
+
+Referenced by X\-Path\-Tool.\-load().
+
+\index{org\-::smallfoot\-::xpath\-::\-X\-Path\-Tool@{org\-::smallfoot\-::xpath\-::\-X\-Path\-Tool}!\-\_\-save@{\-\_\-save}}
+\index{\-\_\-save@{\-\_\-save}!org::smallfoot::xpath::XPathTool@{org\-::smallfoot\-::xpath\-::\-X\-Path\-Tool}}
+\subsubsection[{\-\_\-save}]{\setlength{\rightskip}{0pt plus 5cm}void \-\_\-save (
+\begin{DoxyParamCaption}
+\item[{String}]{xml\-File}
+\end{DoxyParamCaption}
+) throws javax.\-xml.\-transform.\-Transformer\-Configuration\-Exception, java.\-io.\-File\-Not\-Found\-Exception, javax.\-xml.\-transform.\-Transformer\-Exception, {\bf org.\-smallfoot.\-xpath.\-No\-Document\-Exception}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{classorg_1_1smallfoot_1_1xpath_1_1XPathTool_adb7f600accd4a29f376ce8e52edff11a}
+
+
+Save the current X\-M\-L Document to a new file. 
+
+based partially on {\tt Document\-Builder\-Factory.\-java} and influenced by {\tt Writing X\-M\-L on Android}
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\-File} & filename to save into \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em java.\-io.\-File\-Not\-Found\-Exception} & on issues creating the output filestream on xml\-File (ie missing interposing directory or permissions) \\
+\hline
+{\em javax.\-xml.\-transform.\-Transformer\-Configuration\-Exception} & when the javax.\-xml.\-transform.\-Transformer\-Factory is butchered \\
+\hline
+{\em javax.\-xml.\-transform.\-Transformer\-Exception} & for exceptions on the final step, the transformation itself \\
+\hline
+{\em \doxyref{org.\-smallfoot.\-xpath.\-No\-Document\-Exception}{p.}{classorg_1_1smallfoot_1_1xpath_1_1NoDocumentException}} & if the user has tried to search before a document is loaded \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 87 of file X\-Path\-Tool.\-java.
+
+
+
+Referenced by X\-Path\-Tool.\-save().
+
+\index{org\-::smallfoot\-::xpath\-::\-X\-Path\-Tool@{org\-::smallfoot\-::xpath\-::\-X\-Path\-Tool}!load@{load}}
+\index{load@{load}!org::smallfoot::xpath::XPathTool@{org\-::smallfoot\-::xpath\-::\-X\-Path\-Tool}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void load (
+\begin{DoxyParamCaption}
+\item[{String}]{xml\-File}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classorg_1_1smallfoot_1_1xpath_1_1XPathTool_a06e5248d8619f00173d9794f30966dc3}
+
+
+Wrapper to just load the file, spitting out exceptions and stacks as they occur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\-File} & file to load \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 61 of file X\-Path\-Tool.\-java.
+
+
+
+References X\-Path\-Tool.\-\_\-load().
+
+
+
+Referenced by X\-Path\-Tool.\-X\-Path\-Tool().
+
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{classorg_1_1smallfoot_1_1xpath_1_1XPathTool_a06e5248d8619f00173d9794f30966dc3_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{org\-::smallfoot\-::xpath\-::\-X\-Path\-Tool@{org\-::smallfoot\-::xpath\-::\-X\-Path\-Tool}!save@{save}}
+\index{save@{save}!org::smallfoot::xpath::XPathTool@{org\-::smallfoot\-::xpath\-::\-X\-Path\-Tool}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}void save (
+\begin{DoxyParamCaption}
+\item[{String}]{out}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classorg_1_1smallfoot_1_1xpath_1_1XPathTool_aa9370fe3a8b0b2d5b91a76190c1599e0}
+
+
+Wrapper to just save the file, spitting out exceptions and stacks as they occur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & filename to save into \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 106 of file X\-Path\-Tool.\-java.
+
+
+
+References X\-Path\-Tool.\-\_\-save().
+
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{classorg_1_1smallfoot_1_1xpath_1_1XPathTool_aa9370fe3a8b0b2d5b91a76190c1599e0_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{org\-::smallfoot\-::xpath\-::\-X\-Path\-Tool@{org\-::smallfoot\-::xpath\-::\-X\-Path\-Tool}!search@{search}}
+\index{search@{search}!org::smallfoot::xpath::XPathTool@{org\-::smallfoot\-::xpath\-::\-X\-Path\-Tool}}
+\subsubsection[{search}]{\setlength{\rightskip}{0pt plus 5cm}Object search (
+\begin{DoxyParamCaption}
+\item[{String}]{expression, }
+\item[{Q\-Name}]{return\-Type}
+\end{DoxyParamCaption}
+) throws {\bf org.\-smallfoot.\-xpath.\-No\-Document\-Exception}\hspace{0.3cm}{\ttfamily [inline]}}\label{classorg_1_1smallfoot_1_1xpath_1_1XPathTool_af1af4b7f062c6dd322b7e7a81209afb6}
+
+
+Search the current X\-M\-L Document for a match, returning a list of matching nodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expression} & X\-Path expression to search for \\
+\hline
+{\em return\-Type} & namespace context against which the expression is evaluated \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxyref{org.\-smallfoot.\-xpath.\-No\-Document\-Exception}{p.}{classorg_1_1smallfoot_1_1xpath_1_1NoDocumentException}} & if the user has tried to search before a document is loaded \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 129 of file X\-Path\-Tool.\-java.
+
+
+
+Referenced by X\-Path\-Sub.\-main(), and X\-Path\-Set.\-main().
+
+\index{org\-::smallfoot\-::xpath\-::\-X\-Path\-Tool@{org\-::smallfoot\-::xpath\-::\-X\-Path\-Tool}!set\-Attr@{set\-Attr}}
+\index{set\-Attr@{set\-Attr}!org::smallfoot::xpath::XPathTool@{org\-::smallfoot\-::xpath\-::\-X\-Path\-Tool}}
+\subsubsection[{set\-Attr}]{\setlength{\rightskip}{0pt plus 5cm}static int set\-Attr (
+\begin{DoxyParamCaption}
+\item[{Node\-List}]{nodelist, }
+\item[{String}]{replacement}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classorg_1_1smallfoot_1_1xpath_1_1XPathTool_aef43485334ab87e6db498fe403162255}
+
+
+Consume a list of matches, and for each node (entity or attribute) replace the current value. 
+
+This function allows specific programmatic replacement of string values in X\-M\-L to reduce the chance of user error and typos creating erroneous X\-M\-L.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodelist} & list of nodes containing targets/matches to alter \\
+\hline
+{\em replacement} & string to replace for matches \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of matches made 
+\end{DoxyReturn}
+
+
+Definition at line 202 of file X\-Path\-Tool.\-java.
+
+\index{org\-::smallfoot\-::xpath\-::\-X\-Path\-Tool@{org\-::smallfoot\-::xpath\-::\-X\-Path\-Tool}!sub\-Attr@{sub\-Attr}}
+\index{sub\-Attr@{sub\-Attr}!org::smallfoot::xpath::XPathTool@{org\-::smallfoot\-::xpath\-::\-X\-Path\-Tool}}
+\subsubsection[{sub\-Attr}]{\setlength{\rightskip}{0pt plus 5cm}static int sub\-Attr (
+\begin{DoxyParamCaption}
+\item[{Node\-List}]{nodelist, }
+\item[{String}]{edit\-Match, }
+\item[{String}]{edit\-Replace, }
+\item[{boolean}]{global}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classorg_1_1smallfoot_1_1xpath_1_1XPathTool_a2e34675797f629121c1b2a74a19ebd34}
+
+
+Consume a list of matches, and for each node (entity or attribute) make a Strong.\-replace\-First() or a String.\-replace\-All() 
+
+This function is added as a convenience function to allow semi-\/contextual replacement of strings when converting other X\-M\-L content -- this allows single atomic commands to rename components to avoid name-\/clashes and unintended replacements.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodelist} & list of nodes containing targets/matches to alter \\
+\hline
+{\em edit\-Match} & string to match for replacement \\
+\hline
+{\em edit\-Replace} & string to replace for matches \\
+\hline
+{\em global} & whether to replace globally (like sed -\/e 's/\-X/y/g' -- the 'g' at the end) -- which is whether to use a Strong.\-replace\-First() or a String.\-replace\-All() \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of matches made 
+\end{DoxyReturn}
+
+
+Definition at line 158 of file X\-Path\-Tool.\-java.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+java/X\-Path\-Tool.\-java\end{DoxyCompactItemize}

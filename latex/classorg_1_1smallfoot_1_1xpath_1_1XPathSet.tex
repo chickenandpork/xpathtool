@@ -1,0 +1,82 @@
+\section{X\-Path\-Set Class Reference}
+\label{classorg_1_1smallfoot_1_1xpath_1_1XPathSet}\index{X\-Path\-Set@{X\-Path\-Set}}
+
+
+A driving class to interpret commandline arguments and pass them to the underlying \doxyref{X\-Path\-Tool}{p.}{classorg_1_1smallfoot_1_1xpath_1_1XPathTool}.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf X\-Path\-Set} ()\label{classorg_1_1smallfoot_1_1xpath_1_1XPathSet_ae221980d06d6b6137ff05ac3deb5d62e}
+
+\begin{DoxyCompactList}\small\item\em Class Constructor, uncomplicated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bf main} (String[$\,$] args)
+\begin{DoxyCompactList}\small\item\em main(args) handles the processing of arguments as sequential actions to pass to the underlying \doxyref{X\-Path\-Tool}{p.}{classorg_1_1smallfoot_1_1xpath_1_1XPathTool}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries replacements} = 0\label{classorg_1_1smallfoot_1_1xpath_1_1XPathSet_aa0c54debf46b07b29e5d591b260c35f7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A driving class to interpret commandline arguments and pass them to the underlying \doxyref{X\-Path\-Tool}{p.}{classorg_1_1smallfoot_1_1xpath_1_1XPathTool}. 
+
+Definition at line 11 of file X\-Path\-Set.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\index{org\-::smallfoot\-::xpath\-::\-X\-Path\-Set@{org\-::smallfoot\-::xpath\-::\-X\-Path\-Set}!main@{main}}
+\index{main@{main}!org::smallfoot::xpath::XPathSet@{org\-::smallfoot\-::xpath\-::\-X\-Path\-Set}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void main (
+\begin{DoxyParamCaption}
+\item[{String[$\,$]}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classorg_1_1smallfoot_1_1xpath_1_1XPathSet_a8b260eecbaabcef8473fd87ada040682}
+
+
+main(args) handles the processing of arguments as sequential actions to pass to the underlying \doxyref{X\-Path\-Tool}{p.}{classorg_1_1smallfoot_1_1xpath_1_1XPathTool}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & commandline arguments for processing\-: 
+\begin{DoxyItemize}
+\item -\/i loads a file (see \doxyref{X\-Path\-Tool\#load(\-String)}{p.}{classorg_1_1smallfoot_1_1xpath_1_1XPathTool_a06e5248d8619f00173d9794f30966dc3} ) 
+\item -\/o saves a file (see \doxyref{X\-Path\-Tool\#save(\-String)}{p.}{classorg_1_1smallfoot_1_1xpath_1_1XPathTool_aa9370fe3a8b0b2d5b91a76190c1599e0} ) 
+\item -\/r sets a replacement value\-: anything \char`\"{}found\char`\"{} while running a \char`\"{}-\/f\char`\"{} argument is replaced by this value 
+\item -\/f starts a search, replacing the value of all matching nodes and attributes with the replacement (-\/r) value given 
+\item -\/\-R sets a replacement pattern\-: ie /from/to/g \-: anything \char`\"{}found\char`\"{} while running a \char`\"{}-\/f\char`\"{} argument, all \char`\"{}from\char`\"{} are replaced by \char`\"{}to\char`\"{}. \char`\"{}g\char`\"{} as the last parameter allows multiple replacements per matching node 
+\item -\/\-F starts a search, triggering -\/\-R replacement on values on all matching nodes 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 33 of file X\-Path\-Set.\-java.
+
+
+
+References X\-Path\-Tool.\-search().
+
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classorg_1_1smallfoot_1_1xpath_1_1XPathSet_a8b260eecbaabcef8473fd87ada040682_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+java/X\-Path\-Set.\-java\end{DoxyCompactItemize}

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_93c6ba7fb77bae0709fae89c9c13b44a" kind="dir">
+    <compoundname>java</compoundname>
+    <innerfile refid="NoDocumentException_8java">NoDocumentException.java</innerfile>
+    <innerfile refid="version_8java">version.java</innerfile>
+    <innerfile refid="XPathException_8java">XPathException.java</innerfile>
+    <innerfile refid="XPathSet_8java">XPathSet.java</innerfile>
+    <innerfile refid="XPathSub_8java">XPathSub.java</innerfile>
+    <innerfile refid="XPathTool_8java">XPathTool.java</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/allan.clark/src/xpathtool/java/"/>
+  </compounddef>
+</doxygen>

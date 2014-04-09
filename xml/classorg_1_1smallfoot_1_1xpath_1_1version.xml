@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classorg_1_1smallfoot_1_1xpath_1_1version" kind="class" prot="public">
+    <compoundname>org::smallfoot::xpath::version</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1xpath_1_1version_1ae4faf7ff4190d227357ef851490d7757" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void main</definition>
+        <argsstring>(String arg[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>String</type>
+          <declname>arg</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/java/version.java" line="5" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/version.java" bodystart="5" bodyend="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/allan.clark/src/xpathtool/java/version.java" line="4" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/version.java" bodystart="3" bodyend="9"/>
+    <listofallmembers>
+      <member refid="classorg_1_1smallfoot_1_1xpath_1_1version_1ae4faf7ff4190d227357ef851490d7757" prot="public" virt="non-virtual"><scope>org::smallfoot::xpath::version</scope><name>main</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

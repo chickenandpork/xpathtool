@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>JavaDoc API Markup for xpathtool</title>
+    <detaileddescription>
+<para><heading level="1">xpathtool </heading>
+</para><para>Simple get/set tools for XPath-based XML manipulation</para><para>This content started as slightly-modified xmlsoft.org example code, therefore is (<ulink url="http://xmlsoft.org/FAQ.html">http://xmlsoft.org/FAQ.html</ulink>) MIT-Licensed. The Java code is all new, but is intended to provide the same functionality in a pure-java environment, so remains abstractly &quot;derived&quot;. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

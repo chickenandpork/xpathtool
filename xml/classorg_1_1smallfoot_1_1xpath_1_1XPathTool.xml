@@ -1,0 +1,385 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classorg_1_1smallfoot_1_1xpath_1_1XPathTool" kind="class" prot="public">
+    <compoundname>org::smallfoot::xpath::XPathTool</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1ad25ef6220eb54575157ab063bc63a0f0" prot="private" static="no" mutable="no">
+        <type>org.w3c.dom.Document</type>
+        <definition>org.w3c.dom.Document xmlDocument</definition>
+        <argsstring></argsstring>
+        <name>xmlDocument</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/java/XPathTool.java" line="19" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathTool.java" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1a8627e2060c614bb6f468d158b66c20b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>XPathTool</definition>
+        <argsstring>(String xmlFile)</argsstring>
+        <name>XPathTool</name>
+        <param>
+          <type>String</type>
+          <declname>xmlFile</declname>
+        </param>
+        <briefdescription>
+<para>Class Constructor to create with an initial file to load. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xmlFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File to load at start</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1a06e5248d8619f00173d9794f30966dc3" kindref="member">load(String)</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/java/XPathTool.java" line="28" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathTool.java" bodystart="28" bodyend="31"/>
+        <references refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1a06e5248d8619f00173d9794f30966dc3" compoundref="XPathTool_8java" startline="61" endline="73">XPathTool.load</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1a78c4db4e609847477447aab80aaa97d6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>XPathTool</definition>
+        <argsstring>()</argsstring>
+        <name>XPathTool</name>
+        <briefdescription>
+<para>Class Constructor with no initial file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/java/XPathTool.java" line="36" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathTool.java" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1a06e5248d8619f00173d9794f30966dc3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void load</definition>
+        <argsstring>(String xmlFile)</argsstring>
+        <name>load</name>
+        <param>
+          <type>String</type>
+          <declname>xmlFile</declname>
+        </param>
+        <briefdescription>
+<para>Wrapper to just load the file, spitting out exceptions and stacks as they occur. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xmlFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file to load </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/java/XPathTool.java" line="61" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathTool.java" bodystart="61" bodyend="73"/>
+        <references refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1adc3a8f6eb0246c78615de6cc346d4f99" compoundref="XPathTool_8java" startline="50" endline="54">XPathTool._load</references>
+        <referencedby refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1a8627e2060c614bb6f468d158b66c20b8" compoundref="XPathTool_8java" startline="28" endline="31">XPathTool.XPathTool</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1aa9370fe3a8b0b2d5b91a76190c1599e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void save</definition>
+        <argsstring>(String out)</argsstring>
+        <name>save</name>
+        <param>
+          <type>String</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+<para>Wrapper to just save the file, spitting out exceptions and stacks as they occur. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>filename to save into </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/java/XPathTool.java" line="106" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathTool.java" bodystart="106" bodyend="119"/>
+        <references refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1adb7f600accd4a29f376ce8e52edff11a" compoundref="XPathTool_8java" startline="87" endline="99">XPathTool._save</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1af1af4b7f062c6dd322b7e7a81209afb6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object search</definition>
+        <argsstring>(String expression, QName returnType)</argsstring>
+        <name>search</name>
+        <param>
+          <type>String</type>
+          <declname>expression</declname>
+        </param>
+        <param>
+          <type>QName</type>
+          <declname>returnType</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1smallfoot_1_1xpath_1_1NoDocumentException" kindref="compound">org.smallfoot.xpath.NoDocumentException</ref>     </exceptions>
+        <briefdescription>
+<para>Search the current XML Document for a match, returning a list of matching nodes. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expression</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XPath expression to search for </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>returnType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>namespace context against which the expression is evaluated </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1smallfoot_1_1xpath_1_1NoDocumentException" kindref="compound">org.smallfoot.xpath.NoDocumentException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the user has tried to search before a document is loaded </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/java/XPathTool.java" line="129" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathTool.java" bodystart="129" bodyend="143"/>
+        <referencedby refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSub_1a8b260eecbaabcef8473fd87ada040682" compoundref="XPathSub_8java" startline="31" endline="94">XPathSub.main</referencedby>
+        <referencedby refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSet_1a8b260eecbaabcef8473fd87ada040682" compoundref="XPathSet_8java" startline="33" endline="112">XPathSet.main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1adc3a8f6eb0246c78615de6cc346d4f99" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _load</definition>
+        <argsstring>(String xmlFile)</argsstring>
+        <name>_load</name>
+        <param>
+          <type>String</type>
+          <declname>xmlFile</declname>
+        </param>
+        <exceptions> throws javax.xml.parsers.ParserConfigurationException, org.xml.sax.SAXException, java.io.IOException     </exceptions>
+        <briefdescription>
+<para>Open a file. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is actually a wrapper for the complex usage of javax.xml.parsers.DocumentBuilderFactory to find a singleton to instantiate a document from a file.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xmlFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file to load </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>java.io.IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>on issues loading the file given as a parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>javax.xml.parsers.ParserConfigurationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the javax.xml.parsers.DocumentBuilderFactory is butchered </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>org.xml.sax.SAXException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>on parsing issues </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/java/XPathTool.java" line="50" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathTool.java" bodystart="50" bodyend="54"/>
+        <referencedby refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1a06e5248d8619f00173d9794f30966dc3" compoundref="XPathTool_8java" startline="61" endline="73">XPathTool.load</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1adb7f600accd4a29f376ce8e52edff11a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _save</definition>
+        <argsstring>(String xmlFile)</argsstring>
+        <name>_save</name>
+        <param>
+          <type>String</type>
+          <declname>xmlFile</declname>
+        </param>
+        <exceptions> throws javax.xml.transform.TransformerConfigurationException, java.io.FileNotFoundException, javax.xml.transform.TransformerException, <ref refid="classorg_1_1smallfoot_1_1xpath_1_1NoDocumentException" kindref="compound">org.smallfoot.xpath.NoDocumentException</ref>     </exceptions>
+        <briefdescription>
+<para>Save the current XML Document to a new file. </para>        </briefdescription>
+        <detaileddescription>
+<para>based partially on <ulink url="http://download.oracle.com/javase/1.5.0/docs/api/javax/xml/parsers/DocumentBuilderFactory.html">DocumentBuilderFactory.java</ulink> and influenced by <ulink url="http://stackoverflow.com/questions/2290945/writing-xml-on-android/3551691#3551691">Writing XML on Android</ulink></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xmlFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>filename to save into </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>java.io.FileNotFoundException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>on issues creating the output filestream on xmlFile (ie missing interposing directory or permissions) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>javax.xml.transform.TransformerConfigurationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the javax.xml.transform.TransformerFactory is butchered </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>javax.xml.transform.TransformerException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>for exceptions on the final step, the transformation itself </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1smallfoot_1_1xpath_1_1NoDocumentException" kindref="compound">org.smallfoot.xpath.NoDocumentException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the user has tried to search before a document is loaded </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/java/XPathTool.java" line="87" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathTool.java" bodystart="87" bodyend="99"/>
+        <referencedby refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1aa9370fe3a8b0b2d5b91a76190c1599e0" compoundref="XPathTool_8java" startline="106" endline="119">XPathTool.save</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1aef43485334ab87e6db498fe403162255" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int setAttr</definition>
+        <argsstring>(NodeList nodelist, String replacement)</argsstring>
+        <name>setAttr</name>
+        <param>
+          <type>NodeList</type>
+          <declname>nodelist</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>replacement</declname>
+        </param>
+        <briefdescription>
+<para>Consume a list of matches, and for each node (entity or attribute) replace the current value. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function allows specific programmatic replacement of string values in XML to reduce the chance of user error and typos creating erroneous XML.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodelist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list of nodes containing targets/matches to alter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>replacement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string to replace for matches </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of matches made </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/java/XPathTool.java" line="202" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathTool.java" bodystart="202" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1a2e34675797f629121c1b2a74a19ebd34" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int subAttr</definition>
+        <argsstring>(NodeList nodelist, String editMatch, String editReplace, boolean global)</argsstring>
+        <name>subAttr</name>
+        <param>
+          <type>NodeList</type>
+          <declname>nodelist</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>editMatch</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>editReplace</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>global</declname>
+        </param>
+        <briefdescription>
+<para>Consume a list of matches, and for each node (entity or attribute) make a Strong.replaceFirst() or a String.replaceAll() </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is added as a convenience function to allow semi-contextual replacement of strings when converting other XML content <ndash/> this allows single atomic commands to rename components to avoid name-clashes and unintended replacements.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodelist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list of nodes containing targets/matches to alter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>editMatch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string to match for replacement </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>editReplace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string to replace for matches </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>global</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>whether to replace globally (like sed -e &apos;s/X/y/g&apos; <ndash/> the &apos;g&apos; at the end) <ndash/> which is whether to use a Strong.replaceFirst() or a String.replaceAll() </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of matches made </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/java/XPathTool.java" line="158" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathTool.java" bodystart="158" bodyend="191"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool" kindref="compound">XPathTool</ref> is a relatively uncomplicated wrapper for an XPath action: it doesn&apos;t know what you&apos;re doing, and doesn&apos;t assume you&apos;ll do things in a specific order, but tries to stop you from making really silly errors like saving or searching an unloaded file. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/allan.clark/src/xpathtool/java/XPathTool.java" line="18" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathTool.java" bodystart="17" bodyend="230"/>
+    <listofallmembers>
+      <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1adc3a8f6eb0246c78615de6cc346d4f99" prot="protected" virt="non-virtual"><scope>org::smallfoot::xpath::XPathTool</scope><name>_load</name></member>
+      <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1adb7f600accd4a29f376ce8e52edff11a" prot="protected" virt="non-virtual"><scope>org::smallfoot::xpath::XPathTool</scope><name>_save</name></member>
+      <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1a06e5248d8619f00173d9794f30966dc3" prot="public" virt="non-virtual"><scope>org::smallfoot::xpath::XPathTool</scope><name>load</name></member>
+      <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1aa9370fe3a8b0b2d5b91a76190c1599e0" prot="public" virt="non-virtual"><scope>org::smallfoot::xpath::XPathTool</scope><name>save</name></member>
+      <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1af1af4b7f062c6dd322b7e7a81209afb6" prot="public" virt="non-virtual"><scope>org::smallfoot::xpath::XPathTool</scope><name>search</name></member>
+      <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1aef43485334ab87e6db498fe403162255" prot="public" virt="non-virtual"><scope>org::smallfoot::xpath::XPathTool</scope><name>setAttr</name></member>
+      <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1a2e34675797f629121c1b2a74a19ebd34" prot="public" virt="non-virtual"><scope>org::smallfoot::xpath::XPathTool</scope><name>subAttr</name></member>
+      <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1ad25ef6220eb54575157ab063bc63a0f0" prot="private" virt="non-virtual"><scope>org::smallfoot::xpath::XPathTool</scope><name>xmlDocument</name></member>
+      <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1a8627e2060c614bb6f468d158b66c20b8" prot="public" virt="non-virtual"><scope>org::smallfoot::xpath::XPathTool</scope><name>XPathTool</name></member>
+      <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1a78c4db4e609847477447aab80aaa97d6" prot="public" virt="non-virtual"><scope>org::smallfoot::xpath::XPathTool</scope><name>XPathTool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.6">
+  <compound refid="classorg_1_1smallfoot_1_1xpath_1_1NoDocumentException" kind="class"><name>org::smallfoot::xpath::NoDocumentException</name>
+    <member refid="classorg_1_1smallfoot_1_1xpath_1_1NoDocumentException_1ae588def084cf6230b1c1eb88e438a6ea" kind="function"><name>NoDocumentException</name></member>
+  </compound>
+  <compound refid="classorg_1_1smallfoot_1_1xpath_1_1version" kind="class"><name>org::smallfoot::xpath::version</name>
+    <member refid="classorg_1_1smallfoot_1_1xpath_1_1version_1ae4faf7ff4190d227357ef851490d7757" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="classorg_1_1smallfoot_1_1xpath_1_1XPathException" kind="class"><name>org::smallfoot::xpath::XPathException</name>
+    <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathException_1ae3aedf713b3c2f9e20ef4f7c2494ca2c" kind="function"><name>XPathException</name></member>
+  </compound>
+  <compound refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSet" kind="class"><name>org::smallfoot::xpath::XPathSet</name>
+    <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSet_1aa0c54debf46b07b29e5d591b260c35f7" kind="variable"><name>replacements</name></member>
+    <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSet_1ae221980d06d6b6137ff05ac3deb5d62e" kind="function"><name>XPathSet</name></member>
+    <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSet_1a8b260eecbaabcef8473fd87ada040682" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSub" kind="class"><name>org::smallfoot::xpath::XPathSub</name>
+    <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSub_1aa0c54debf46b07b29e5d591b260c35f7" kind="variable"><name>replacements</name></member>
+    <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSub_1aae40faf18a11638688e225f28edd8cf4" kind="function"><name>XPathSub</name></member>
+    <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSub_1a8b260eecbaabcef8473fd87ada040682" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool" kind="class"><name>org::smallfoot::xpath::XPathTool</name>
+    <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1ad25ef6220eb54575157ab063bc63a0f0" kind="variable"><name>xmlDocument</name></member>
+    <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1a8627e2060c614bb6f468d158b66c20b8" kind="function"><name>XPathTool</name></member>
+    <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1a78c4db4e609847477447aab80aaa97d6" kind="function"><name>XPathTool</name></member>
+    <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1a06e5248d8619f00173d9794f30966dc3" kind="function"><name>load</name></member>
+    <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1aa9370fe3a8b0b2d5b91a76190c1599e0" kind="function"><name>save</name></member>
+    <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1af1af4b7f062c6dd322b7e7a81209afb6" kind="function"><name>search</name></member>
+    <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1adc3a8f6eb0246c78615de6cc346d4f99" kind="function"><name>_load</name></member>
+    <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1adb7f600accd4a29f376ce8e52edff11a" kind="function"><name>_save</name></member>
+    <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1aef43485334ab87e6db498fe403162255" kind="function"><name>setAttr</name></member>
+    <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1a2e34675797f629121c1b2a74a19ebd34" kind="function"><name>subAttr</name></member>
+  </compound>
+  <compound refid="namespaceorg" kind="namespace"><name>org</name>
+  </compound>
+  <compound refid="namespaceorg_1_1smallfoot" kind="namespace"><name>org::smallfoot</name>
+  </compound>
+  <compound refid="namespaceorg_1_1smallfoot_1_1xpath" kind="namespace"><name>org::smallfoot::xpath</name>
+  </compound>
+  <compound refid="namespaceorg_1_1w3c_1_1dom" kind="namespace"><name>org::w3c::dom</name>
+  </compound>
+  <compound refid="README_8dox" kind="file"><name>README.dox</name>
+  </compound>
+  <compound refid="NoDocumentException_8java" kind="file"><name>NoDocumentException.java</name>
+  </compound>
+  <compound refid="version_8java" kind="file"><name>version.java</name>
+  </compound>
+  <compound refid="XPathException_8java" kind="file"><name>XPathException.java</name>
+  </compound>
+  <compound refid="XPathSet_8java" kind="file"><name>XPathSet.java</name>
+  </compound>
+  <compound refid="XPathSub_8java" kind="file"><name>XPathSub.java</name>
+  </compound>
+  <compound refid="XPathTool_8java" kind="file"><name>XPathTool.java</name>
+  </compound>
+  <compound refid="md_htdocs_README" kind="page"><name>md_htdocs_README</name>
+  </compound>
+  <compound refid="dir_93c6ba7fb77bae0709fae89c9c13b44a" kind="dir"><name>java</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

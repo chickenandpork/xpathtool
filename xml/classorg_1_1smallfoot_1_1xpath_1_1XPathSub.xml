@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classorg_1_1smallfoot_1_1xpath_1_1XPathSub" kind="class" prot="public">
+    <compoundname>org::smallfoot::xpath::XPathSub</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1smallfoot_1_1xpath_1_1XPathSub_1aa0c54debf46b07b29e5d591b260c35f7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int replacements</definition>
+        <argsstring></argsstring>
+        <name>replacements</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/java/XPathSub.java" line="13" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathSub.java" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1xpath_1_1XPathSub_1aae40faf18a11638688e225f28edd8cf4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>XPathSub</definition>
+        <argsstring>()</argsstring>
+        <name>XPathSub</name>
+        <briefdescription>
+<para>Class Constructor, uncomplicated. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/java/XPathSub.java" line="18" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathSub.java" bodystart="18" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1xpath_1_1XPathSub_1a8b260eecbaabcef8473fd87ada040682" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void main</definition>
+        <argsstring>(String[] args)</argsstring>
+        <name>main</name>
+        <param>
+          <type>String[]</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>main(args) handles the processing of arguments as sequential actions to pass to the underlying <ref refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool" kindref="compound">XPathTool</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>commandline arguments for processing: <itemizedlist>
+<listitem>
+<para>-i loads a file (see <ref refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1a06e5248d8619f00173d9794f30966dc3" kindref="member">XPathTool#load(String)</ref> ) </para></listitem>
+<listitem>
+<para>-o saves a file (see <ref refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1aa9370fe3a8b0b2d5b91a76190c1599e0" kindref="member">XPathTool#save(String)</ref> ) </para></listitem>
+<listitem>
+<para>-r sets a replacement expression: anything &quot;found&quot; while running a &quot;-f&quot; argument is munged by this value </para></listitem>
+<listitem>
+<para>-f starts a search, replacing the value of all matching nodes and attributes with the replcement value given </para></listitem>
+</itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/java/XPathSub.java" line="31" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathSub.java" bodystart="31" bodyend="94"/>
+        <references refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1af1af4b7f062c6dd322b7e7a81209afb6" compoundref="XPathTool_8java" startline="129" endline="143">XPathTool.search</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A driving class to interpret commandline arguments and pass them to the underlying <ref refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool" kindref="compound">XPathTool</ref>. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/allan.clark/src/xpathtool/java/XPathSub.java" line="11" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathSub.java" bodystart="11" bodyend="96"/>
+    <listofallmembers>
+      <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSub_1a8b260eecbaabcef8473fd87ada040682" prot="public" virt="non-virtual"><scope>org::smallfoot::xpath::XPathSub</scope><name>main</name></member>
+      <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSub_1aa0c54debf46b07b29e5d591b260c35f7" prot="private" virt="non-virtual"><scope>org::smallfoot::xpath::XPathSub</scope><name>replacements</name></member>
+      <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSub_1aae40faf18a11638688e225f28edd8cf4" prot="public" virt="non-virtual"><scope>org::smallfoot::xpath::XPathSub</scope><name>XPathSub</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

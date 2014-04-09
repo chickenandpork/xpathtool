@@ -1,9 +1,0 @@
-package org.smallfoot.xpath;
-
-public class version
-{
-    static public void main (String arg[])
-    {
-        System.out.println("@VERSION@.@BUILDID@");
-    }
-}
