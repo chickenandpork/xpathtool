@@ -56,27 +56,8 @@ AC_ARG_WITH(xmllintcommentindent,
 AC_SUBST([XMLLINTINDENT], ${WITH_XMLLINTINDENT})
 
 AC_PATH_PROGS(XSLTPROC, [xsltproc], [missing xsltproc])
-AC_ARG_WITH(doxygen,
-[AS_HELP_STRING([--with-doxygen],[Indicate Doxygen allowing a without-; (default=search)])],
-[
-    case "$withval" in
-	""|"yes") 
-		AC_PATH_PROGS(DOXYGEN, [doxygen], missing, $PATH:/Applications/Doxygen.app/Contents/Resources)
-		AC_PATH_PROGS(FOP, [fop], missing)
-		;;
-	"no")  DOXYGEN=missing ;;
-	*) DOXYGEN=$withval ;;
-    esac
-],
-[
-	DOXYGEN=missing 
-])
-AC_PATH_PROGS(DOT, [dot], missing, $PATH:/usr/local/bin:/usr/local/graph*/bin)
-AC_SUBST(PATHDOT, [`dirname "${DOT}"`])
-AM_CONDITIONAL(DO_DOT, test "x$DOT" != "xmissing")
-AM_CONDITIONAL(DO_DOXYGEN, test "x$DOXYGEN" != "xmissing" -a "x$DOT" != "xmissing")
-if test "x$DOT" != "xmissing"; then HAVE_DOT=yes; else HAVE_DOT=no; fi
-AC_SUBST(HAVE_DOT)
+CHECK_DOXYGEN(pkg/Doxyfile.in)
+
 AC_PATH_PROGS(ASTYLE, [astyle], missing, $PATH:$HOME/bin)
 AM_CONDITIONAL(DO_ASTYLE, test "x$ASTYLE" != "xmissing")
 AC_PATH_PROGS(RPMBUILD, [rpmbuild], [missing rpmbuild])
@@ -152,11 +133,6 @@ AC_CONFIG_FILES(Makefile
 if test "x$RPMBUILD" != "xmissing rpmbuild"
 then
   AC_CONFIG_FILES(xpathtool.spec:pkg/rpm/xpathtool.spec.in)
-fi
-
-if test "x$DOXYGEN" != "xmissing"
-then
-  AC_CONFIG_FILES(Doxyfile:pkg/Doxyfile.in)
 fi
 
 AC_OUTPUT

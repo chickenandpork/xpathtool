@@ -14,8 +14,22 @@ EXTRA_DIST = @PACKAGE@.spec gitdescribe
 
 
 if DO_DOXYGEN
-doc: Doxyfile
+doc: htdocs/README.dox Doxyfile
 	$(DOXYGEN)
+	if test -d $(<D)/.git; then (cd $(<D) && git add -A); if test -n "$(DOXYMESSAGE)" ; then (cd $(<D) && git commit -a -m "$(DOXYMESSAGE)" && git push); fi; else echo "$(<D) subdir not set as a subrepo; see http:// ..."; exit 1; fi
+
+htdocs/README.dox: README.md Makefile
+	if test -d $(@D)/.git; then :; else \
+		if grep $(@D) .gitignore; then echo found gitignore; else echo $(@D) >> .gitignore && git add .gitignore; fi ; \
+		if git branch --list|grep gh-pages; then echo found gh-pages; else echo you need to create the gh-pages branch on github; exit 1; fi ; \
+		git clone $$(git config --get remote.origin.url) -b gh-pages $(@D) && find $(@D) -name $(@D) -o -name .git -prune -o -name xml -prune -o -name latex -prune -o -exec rm -fr {} \; 2>/dev/null ; \
+		echo "checked out" ; \
+	fi
+if DO_DOXYGEN_MD
+	awk 'BEGIN { print "@file "; print "@mainpage JavaDoc API Markup for @PACKAGE@"; } { printf "%s\n",$$0; } END {print "" }' $< > $@
+else
+	awk 'BEGIN { print "/** @file "; print "@mainpage JavaDoc API Markup for @PACKAGE@"; } /@PACKAGE@$$/ {next} /^=+$$/ {next} { printf " * %s\n",$$0; } END {print " */" }' $< > $@
+endif DO_DOXYGEN_MD_FALSE
 endif
 
 if DO_ASTYLE
