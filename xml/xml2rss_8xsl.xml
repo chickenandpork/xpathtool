@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="xml2rss_8xsl" kind="file">
+    <compoundname>xml2rss.xsl</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="xml2rss_8xsl_1a618330d06280831751a51fb0dd2c2ebe" prot="public" static="no" mutable="no">
+        <type>file</type>
+        <definition>file __pad0__</definition>
+        <argsstring></argsstring>
+        <name>__pad0__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/src/xml2rss.xsl" line="21" column="1" bodyfile="/Users/allan.clark/src/xpathtool/src/xml2rss.xsl" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="xml2rss_8xsl_1ac521e5e43ae7dfe25ae807f46e649a92" prot="public" static="no" mutable="no">
+        <type>http</type>
+        <definition>http __pad1__</definition>
+        <argsstring></argsstring>
+        <name>__pad1__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/src/xml2rss.xsl" line="22" column="1" bodyfile="/Users/allan.clark/src/xpathtool/src/xml2rss.xsl" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="xml2rss_8xsl_1acf229077a8db23df99c19beb55caf714" prot="public" static="no" mutable="no">
+        <type>license</type>
+        <definition>license __pad2__</definition>
+        <argsstring></argsstring>
+        <name>__pad2__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/src/xml2rss.xsl" line="23" column="1" bodyfile="/Users/allan.clark/src/xpathtool/src/xml2rss.xsl" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="xml2rss_8xsl_1a1899afd4c8e74de239dd896c400fed7d" prot="public" static="no" mutable="no">
+        <type>built</type>
+        <definition>built __pad3__</definition>
+        <argsstring></argsstring>
+        <name>__pad3__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/src/xml2rss.xsl" line="24" column="1" bodyfile="/Users/allan.clark/src/xpathtool/src/xml2rss.xsl" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="xml2rss_8xsl_1a1a06f9c22bf87c9a10f7aa46479c70e9" prot="public" static="no" mutable="no">
+        <type>br &amp;</type>
+        <definition>ul &amp; gt</definition>
+        <argsstring></argsstring>
+        <name>gt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/src/xml2rss.xsl" line="19" column="1" bodyfile="/Users/allan.clark/src/xpathtool/src/xml2rss.xsl" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="xml2rss_8xsl_1a4d311d4d33f4cad6c79677baa9cf460d" prot="public" static="no" mutable="no">
+        <type>a</type>
+        <definition>a href</definition>
+        <argsstring></argsstring>
+        <name>href</name>
+        <initializer>=&quot;http://repos.chickenandporn.com/CentOS5.4/RPMS.3rdparty/&lt;xsl:value-of select=&quot;arch&quot;/&gt;/&lt;xsl:value-of select=&quot;filename&quot;/&gt;&quot;&amp;gt</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/src/xml2rss.xsl" line="21" column="1" bodyfile="/Users/allan.clark/src/xpathtool/src/xml2rss.xsl" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="xml2rss_8xsl_1af6eaf5451d33323a7b1f53e11031796f" prot="public" static="no" mutable="no">
+        <type>&lt;?xmlversion=&quot;1.0&quot;encoding=&quot;UTF-8&quot;?&gt;&lt; xsl:stylesheetxmlns:xsl=&quot;http:&lt;xsl:outputmethod=&quot;xml&quot;encoding=&quot;UTF-8&quot;/&gt;&lt;xsl:templatematch=&quot;rpms&quot;&gt;&lt;rssversion=&quot;2.0&quot;&gt;&lt;channel&gt;&lt;title&gt; RPMs&lt;/title&gt;&lt;xsl:apply-templatesselect=&quot;rpm&quot;&gt;&lt;xsl:sortselect=&quot;buildTime&quot;order=&quot;descending&quot;/&gt;&lt;xsl:sortselect=&quot;name&quot;/&gt;&lt;xsl:sortselect=&quot;arch&quot;/&gt;&lt;/xsl:apply-templates&gt;&lt;/channel&gt;&lt;/rss&gt;&lt;/xsl:template&gt;&lt;xsl:templatematch=&quot;rpm&quot;&gt;&lt;item&gt;&lt;title&gt;&lt;xsl:value-ofselect=&quot;name&quot;/&gt;&lt;xsl:value-ofselect=&quot;version&quot;/&gt;&lt;xsl:value-ofselect=&quot;release&quot;/&gt;&lt;/title&gt;&lt;link&gt;</type>
+        <definition>&lt;?xmlversion=&quot;1.0&quot;encoding=&quot;UTF-8&quot;?&gt;&lt;xsl:stylesheetxmlns:xsl=&quot;http:&lt;xsl:outputmethod=&quot;xml&quot;encoding=&quot;UTF-8&quot;/&gt;&lt;xsl:templatematch=&quot;rpms&quot;&gt;&lt;rssversion=&quot;2.0&quot;&gt;&lt;channel&gt;&lt;title&gt; RPMs&lt;/title&gt;&lt;xsl:apply-templatesselect=&quot;rpm&quot;&gt;&lt;xsl:sortselect=&quot;buildTime&quot;order=&quot;descending&quot;/&gt;&lt;xsl:sortselect=&quot;name&quot;/&gt;&lt;xsl:sortselect=&quot;arch&quot;/&gt;&lt;/xsl:apply-templates&gt;&lt;/channel&gt;&lt;/rss&gt;&lt;/xsl:template&gt;&lt;xsl:templatematch=&quot;rpm&quot;&gt;&lt;item&gt;&lt;title&gt;&lt;xsl:value-ofselect=&quot;name&quot;/&gt;&lt;xsl:value-ofselect=&quot;version&quot;/&gt;&lt;xsl:value-ofselect=&quot;release&quot;/&gt;&lt;/title&gt;&lt;link&gt; http</definition>
+        <argsstring></argsstring>
+        <name>http</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/src/xml2rss.xsl" line="16" column="1" bodyfile="/Users/allan.clark/src/xpathtool/src/xml2rss.xsl" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="xml2rss_8xsl_1a857c8c8ca640fb2283d751a715bd1ee9" prot="public" static="no" mutable="no">
+        <type>&amp;</type>
+        <definition>&amp; lt</definition>
+        <argsstring></argsstring>
+        <name>lt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/src/xml2rss.xsl" line="20" column="1" bodyfile="/Users/allan.clark/src/xpathtool/src/xml2rss.xsl" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/allan.clark/src/xpathtool/src/xml2rss.xsl"/>
+  </compounddef>
+</doxygen>

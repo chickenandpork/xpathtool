@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="rpm2xml_8c" kind="file">
+    <compoundname>rpm2xml.c</compoundname>
+    <includes local="no">time.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">rpm/rpmcli.h</includes>
+    <includes local="no">rpm/rpmdb.h</includes>
+    <includes local="no">rpm/rpmds.h</includes>
+    <includes local="no">rpm/rpmts.h</includes>
+    <includes local="no">string.h</includes>
+    <incdepgraph>
+      <node id="20">
+        <label>rpm/rpmdb.h</label>
+      </node>
+      <node id="18">
+        <label>stdlib.h</label>
+      </node>
+      <node id="22">
+        <label>rpm/rpmts.h</label>
+      </node>
+      <node id="21">
+        <label>rpm/rpmds.h</label>
+      </node>
+      <node id="19">
+        <label>rpm/rpmcli.h</label>
+      </node>
+      <node id="23">
+        <label>string.h</label>
+      </node>
+      <node id="17">
+        <label>time.h</label>
+      </node>
+      <node id="16">
+        <label>src/rpm2xml.c</label>
+        <link refid="rpm2xml.c"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="rpm2xml_8c_1aba4680bea50e4ffb92fe4ca7ee66b86c" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char hex[]</definition>
+        <argsstring>[]</argsstring>
+        <name>hex</name>
+        <initializer>= &quot;0123456789abcdef&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/src/rpm2xml.c" line="24" column="1" bodyfile="/Users/allan.clark/src/xpathtool/src/rpm2xml.c" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="rpm2xml_8c_1a7259de3afba1e9ba9330803ceb127c40" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char rfc3986Reserved[]</definition>
+        <argsstring>[]</argsstring>
+        <name>rfc3986Reserved</name>
+        <initializer>= &quot;%&amp;&apos;()*+,/:;&lt;=&gt;?@[]&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/src/rpm2xml.c" line="23" column="1" bodyfile="/Users/allan.clark/src/xpathtool/src/rpm2xml.c" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="rpm2xml_8c_1a7955293257a4c9d8726ce1bb683b1be7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int countRes</definition>
+        <argsstring>(const char *s)</argsstring>
+        <name>countRes</name>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/src/rpm2xml.c" line="39" column="1" bodyfile="/Users/allan.clark/src/xpathtool/src/rpm2xml.c" bodystart="39" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="rpm2xml_8c_1ae8aeaffc912db30a135a529824a2e216" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getAndPrintHeader</definition>
+        <argsstring>(char *filename)</argsstring>
+        <name>getAndPrintHeader</name>
+        <param>
+          <type>char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/src/rpm2xml.c" line="131" column="1" bodyfile="/Users/allan.clark/src/xpathtool/src/rpm2xml.c" bodystart="131" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="rpm2xml_8c_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/src/rpm2xml.c" line="253" column="1" bodyfile="/Users/allan.clark/src/xpathtool/src/rpm2xml.c" bodystart="253" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="rpm2xml_8c_1a997eb54aa8d462d2fe89f197fb42ea8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int print822Date</definition>
+        <argsstring>(int res_type, char *element, void *dd)</argsstring>
+        <name>print822Date</name>
+        <param>
+          <type>int</type>
+          <declname>res_type</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>element</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>dd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/src/rpm2xml.c" line="215" column="1" bodyfile="/Users/allan.clark/src/xpathtool/src/rpm2xml.c" bodystart="215" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="rpm2xml_8c_1a3bedf99f1c70ff60aa985262aee460d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int printISODate</definition>
+        <argsstring>(int res_type, char *element, void *dd)</argsstring>
+        <name>printISODate</name>
+        <param>
+          <type>int</type>
+          <declname>res_type</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>element</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>dd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/src/rpm2xml.c" line="234" column="1" bodyfile="/Users/allan.clark/src/xpathtool/src/rpm2xml.c" bodystart="234" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="rpm2xml_8c_1ac22ecdd60b1b83009f94972241f1ef5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int printRes</definition>
+        <argsstring>(int res_type, char *element, void *res)</argsstring>
+        <name>printRes</name>
+        <param>
+          <type>int</type>
+          <declname>res_type</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>element</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/src/rpm2xml.c" line="105" column="1" bodyfile="/Users/allan.clark/src/xpathtool/src/rpm2xml.c" bodystart="105" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="rpm2xml_8c_1aba9fb92de3617df0adbae9153b780dbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rescomp</definition>
+        <argsstring>(const void *_k, const void *_t)</argsstring>
+        <name>rescomp</name>
+        <param>
+          <type>const void *</type>
+          <declname>_k</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>_t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/src/rpm2xml.c" line="28" column="1" bodyfile="/Users/allan.clark/src/xpathtool/src/rpm2xml.c" bodystart="28" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="rpm2xml_8c_1acaf4b3ff72ec7e2e98c967393e99eb30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void urlPrint</definition>
+        <argsstring>(char *element, char *string)</argsstring>
+        <name>urlPrint</name>
+        <param>
+          <type>char *</type>
+          <declname>element</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/src/rpm2xml.c" line="82" column="1" bodyfile="/Users/allan.clark/src/xpathtool/src/rpm2xml.c" bodystart="82" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="rpm2xml_8c_1a983f3bd744dfd0845eb39e3e179eede4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xmlPrint</definition>
+        <argsstring>(char *element, char *string)</argsstring>
+        <name>xmlPrint</name>
+        <param>
+          <type>char *</type>
+          <declname>element</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/src/rpm2xml.c" line="50" column="1" bodyfile="/Users/allan.clark/src/xpathtool/src/rpm2xml.c" bodystart="50" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/allan.clark/src/xpathtool/src/rpm2xml.c"/>
+  </compounddef>
+</doxygen>

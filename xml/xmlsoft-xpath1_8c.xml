@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="xmlsoft-xpath1_8c" kind="file">
+    <compoundname>xmlsoft-xpath1.c</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">libxml/tree.h</includes>
+    <includes local="no">libxml/parser.h</includes>
+    <includes local="no">libxml/xpath.h</includes>
+    <includes local="no">libxml/xpathInternals.h</includes>
+    <incdepgraph>
+      <node id="31">
+        <label>assert.h</label>
+      </node>
+      <node id="28">
+        <label>stdlib.h</label>
+      </node>
+      <node id="33">
+        <label>libxml/parser.h</label>
+      </node>
+      <node id="30">
+        <label>string.h</label>
+      </node>
+      <node id="27">
+        <label>src/xmlsoft-xpath1.c</label>
+        <link refid="xmlsoft-xpath1.c"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>libxml/xpath.h</label>
+      </node>
+      <node id="32">
+        <label>libxml/tree.h</label>
+      </node>
+      <node id="35">
+        <label>libxml/xpathInternals.h</label>
+      </node>
+      <node id="29">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="xmlsoft-xpath1_8c_1a840291bc02cba5474a4cb46a9b9566fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(void)</argsstring>
+        <name>main</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>section: XPath synopsis: Evaluate XPath expression and prints result node set. </para>        </briefdescription>
+        <detaileddescription>
+<para>purpose: Shows how to evaluate XPath expression and register known namespaces in XPath context. usage: xpath1 &lt;xml-file&gt; &lt;xpath-expr&gt; [&lt;known-ns-list&gt;] test: ./xpath1 test3.xml &apos;//child2&apos; &gt; xpath1.tmp ; diff xpath1.tmp xpath1.res ; rm xpath1.tmp author: Aleksey Sanin copy: see Copyright for the status of this software. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/src/xmlsoft-xpath1.c" line="318" column="1" bodyfile="/Users/allan.clark/src/xpathtool/src/xmlsoft-xpath1.c" bodystart="318" bodyend="321"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/allan.clark/src/xpathtool/src/xmlsoft-xpath1.c"/>
+  </compounddef>
+</doxygen>

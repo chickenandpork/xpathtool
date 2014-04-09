@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>src</compoundname>
+    <innerfile refid="rpm2xml_8c">rpm2xml.c</innerfile>
+    <innerfile refid="xml2rss_8xsl">xml2rss.xsl</innerfile>
+    <innerfile refid="xmlsoft-xpath1_8c">xmlsoft-xpath1.c</innerfile>
+    <innerfile refid="xmlsoft-xpath2_8c">xmlsoft-xpath2.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/allan.clark/src/xpathtool/src/"/>
+  </compounddef>
+</doxygen>
