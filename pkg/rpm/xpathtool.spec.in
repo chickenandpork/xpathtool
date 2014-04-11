@@ -55,7 +55,7 @@ rm -fr %{buildroot}/%{_datadir}/@PACKAGE@/jars
 
 %files java
 # exported in java/Makefile.am
-%{_datadir}/@PACKAGE@/xpath.jar
+%{_datadir}/@PACKAGE@/@PACKAGE@.jar
 
 %files c
 # exported in src/Makefile.am
