@@ -4,6 +4,7 @@ dnl
 AC_DEFUN([SVN_CHECK_JDK],
 [
   JAVA_OLDEST_WORKING_VER="$1"
+  JAVA_SOURCE_VER="$2"
   AC_ARG_WITH(jdk,
               AS_HELP_STRING([--with-jdk=PATH],
                              [Try to use 'PATH/include' to find the JNI
@@ -15,15 +16,15 @@ AC_DEFUN([SVN_CHECK_JDK],
         JDK_SUITABLE=no
       ;;
       "yes")
-        SVN_FIND_JDK(check, $JAVA_OLDEST_WORKING_VER)
+        SVN_FIND_JDK(check, $JAVA_OLDEST_WORKING_VER, $JAVA_SOURCE_VER)
       ;;
       *)
-        SVN_FIND_JDK($withval, $JAVA_OLDEST_WORKING_VER)
+        SVN_FIND_JDK($withval, $JAVA_OLDEST_WORKING_VER, $JAVA_SOURCE_VER)
       ;;
     esac
   ],
   [
-    SVN_FIND_JDK(check, $JAVA_OLDEST_WORKING_VER)
+    SVN_FIND_JDK(check, $JAVA_OLDEST_WORKING_VER, $JAVA_SOURCE_VER)
   ])
 ])
 
@@ -31,6 +32,7 @@ AC_DEFUN([SVN_FIND_JDK],
 [
   where=$1
   JAVA_OLDEST_WORKING_VER="$2"
+  JAVA_SOURCE_VER="$3"
 
   JDK=none
   JAVA_BIN=none
@@ -39,6 +41,8 @@ AC_DEFUN([SVN_FIND_JDK],
   JAVAH=none
   JAR=none
   JNI_INCLUDES=none
+
+  if test x${JAVA_SOURCE_VER} = x; then JAVA_SOURCE_VER="1.3"; fi
 
   JDK_SUITABLE=no
   AC_MSG_CHECKING([for JDK])
@@ -149,7 +153,7 @@ AC_DEFUN([SVN_FIND_JDK],
     dnl Add javac flags.
     # The release for "-source" could actually be greater than that
     # of "-target", if we want to cross-compile for lesser JVMs.
-    JAVAC_FLAGS="-target $JAVA_OLDEST_WORKING_VER -source 1.3"
+    JAVAC_FLAGS="-target $JAVA_OLDEST_WORKING_VER -source $JAVA_SOURCE_VER"
     if test "$enable_debugging" = "yes"; then
       JAVAC_FLAGS="-g $JAVAC_FLAGS"
     fi

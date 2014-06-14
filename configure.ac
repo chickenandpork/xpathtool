@@ -22,7 +22,7 @@ AC_SUBST(AUTOM4TE, autom4te)
 
 AM_PATH_XML2()
 
-SVN_CHECK_JDK([1.6.0])
+SVN_CHECK_JDK([1.6],[1.6])
 AM_CONDITIONAL(DO_JAVA, test "$JAVAC" != none)
 
 dnl ***********************************************************************
