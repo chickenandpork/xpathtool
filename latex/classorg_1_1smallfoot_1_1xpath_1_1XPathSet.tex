@@ -19,9 +19,9 @@ static void {\bf main} (String[$\,$] args)
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-int {\bfseries replacements} = 0\label{classorg_1_1smallfoot_1_1xpath_1_1XPathSet_aa0c54debf46b07b29e5d591b260c35f7}
+int {\bf replacements} = 0\label{classorg_1_1smallfoot_1_1xpath_1_1XPathSet_aa0c54debf46b07b29e5d591b260c35f7}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em counts the number of replacements completed \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -53,16 +53,23 @@ main(args) handles the processing of arguments as sequential actions to pass to 
 \item -\/f starts a search, replacing the value of all matching nodes and attributes with the replacement (-\/r) value given 
 \item -\/\-R sets a replacement pattern\-: ie /from/to/g \-: anything \char`\"{}found\char`\"{} while running a \char`\"{}-\/f\char`\"{} argument, all \char`\"{}from\char`\"{} are replaced by \char`\"{}to\char`\"{}. \char`\"{}g\char`\"{} as the last parameter allows multiple replacements per matching node 
 \item -\/\-F starts a search, triggering -\/\-R replacement on values on all matching nodes 
+\item -\/\-V shows version and quits 
 \end{DoxyItemize}\\
 \hline
 \end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[{\bf Todo}]complete usage message \end{DoxyRefDesc}
 
 
-Definition at line 33 of file X\-Path\-Set.\-java.
+default\-: case '?'\-: // falls-\/thru to usage
+
+case 'H'\-: tool.\-usage(g.\-progname()); break;
+
+Definition at line 34 of file X\-Path\-Set.\-java.
 
 
 
-References X\-Path\-Tool.\-search().
+References X\-Path\-Set.\-replacements, and X\-Path\-Tool.\-search().
 
 
 

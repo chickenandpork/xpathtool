@@ -9,12 +9,15 @@
         <argsstring></argsstring>
         <name>xmlDocument</name>
         <briefdescription>
-        </briefdescription>
+<para>holds the document for consideration </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/allan.clark/src/xpathtool/java/XPathTool.java" line="19" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathTool.java" bodystart="19" bodyend="-1"/>
+        <referencedby refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1adc3a8f6eb0246c78615de6cc346d4f99" compoundref="XPathTool_8java" startline="50" endline="54">XPathTool._load</referencedby>
+        <referencedby refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1adb7f600accd4a29f376ce8e52edff11a" compoundref="XPathTool_8java" startline="87" endline="99">XPathTool._save</referencedby>
+        <referencedby refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1af1af4b7f062c6dd322b7e7a81209afb6" compoundref="XPathTool_8java" startline="130" endline="144">XPathTool.search</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -151,12 +154,14 @@
 <para>if the user has tried to search before a document is loaded </para></parameterdescription>
 </parameteritem>
 </parameterlist>
+<simplesect kind="return"><para>list of matching nodes </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/allan.clark/src/xpathtool/java/XPathTool.java" line="129" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathTool.java" bodystart="129" bodyend="143"/>
+        <location file="/Users/allan.clark/src/xpathtool/java/XPathTool.java" line="130" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathTool.java" bodystart="130" bodyend="144"/>
+        <references refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1ad25ef6220eb54575157ab063bc63a0f0" compoundref="XPathTool_8java" startline="19">XPathTool.xmlDocument</references>
         <referencedby refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSub_1a8b260eecbaabcef8473fd87ada040682" compoundref="XPathSub_8java" startline="31" endline="94">XPathSub.main</referencedby>
-        <referencedby refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSet_1a8b260eecbaabcef8473fd87ada040682" compoundref="XPathSet_8java" startline="33" endline="112">XPathSet.main</referencedby>
+        <referencedby refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSet_1a8b260eecbaabcef8473fd87ada040682" compoundref="XPathSet_8java" startline="34" endline="134">XPathSet.main</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -207,6 +212,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/allan.clark/src/xpathtool/java/XPathTool.java" line="50" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathTool.java" bodystart="50" bodyend="54"/>
+        <references refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1ad25ef6220eb54575157ab063bc63a0f0" compoundref="XPathTool_8java" startline="19">XPathTool.xmlDocument</references>
         <referencedby refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1a06e5248d8619f00173d9794f30966dc3" compoundref="XPathTool_8java" startline="61" endline="73">XPathTool.load</referencedby>
       </memberdef>
       <memberdef kind="function" id="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1adb7f600accd4a29f376ce8e52edff11a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -263,6 +269,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/allan.clark/src/xpathtool/java/XPathTool.java" line="87" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathTool.java" bodystart="87" bodyend="99"/>
+        <references refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1ad25ef6220eb54575157ab063bc63a0f0" compoundref="XPathTool_8java" startline="19">XPathTool.xmlDocument</references>
         <referencedby refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1aa9370fe3a8b0b2d5b91a76190c1599e0" compoundref="XPathTool_8java" startline="106" endline="119">XPathTool.save</referencedby>
       </memberdef>
       </sectiondef>
@@ -302,7 +309,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/allan.clark/src/xpathtool/java/XPathTool.java" line="202" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathTool.java" bodystart="202" bodyend="228"/>
+        <location file="/Users/allan.clark/src/xpathtool/java/XPathTool.java" line="203" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathTool.java" bodystart="203" bodyend="229"/>
       </memberdef>
       <memberdef kind="function" id="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1a2e34675797f629121c1b2a74a19ebd34" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -361,14 +368,14 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/allan.clark/src/xpathtool/java/XPathTool.java" line="158" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathTool.java" bodystart="158" bodyend="191"/>
+        <location file="/Users/allan.clark/src/xpathtool/java/XPathTool.java" line="159" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathTool.java" bodystart="159" bodyend="192"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para><ref refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool" kindref="compound">XPathTool</ref> is a relatively uncomplicated wrapper for an XPath action: it doesn&apos;t know what you&apos;re doing, and doesn&apos;t assume you&apos;ll do things in a specific order, but tries to stop you from making really silly errors like saving or searching an unloaded file. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/allan.clark/src/xpathtool/java/XPathTool.java" line="18" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathTool.java" bodystart="17" bodyend="230"/>
+    <location file="/Users/allan.clark/src/xpathtool/java/XPathTool.java" line="18" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathTool.java" bodystart="17" bodyend="231"/>
     <listofallmembers>
       <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1adc3a8f6eb0246c78615de6cc346d4f99" prot="protected" virt="non-virtual"><scope>org::smallfoot::xpath::XPathTool</scope><name>_load</name></member>
       <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1adb7f600accd4a29f376ce8e52edff11a" prot="protected" virt="non-virtual"><scope>org::smallfoot::xpath::XPathTool</scope><name>_save</name></member>

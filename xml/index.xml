@@ -66,16 +66,6 @@
     <member refid="rpm2xml_8c_1acaf4b3ff72ec7e2e98c967393e99eb30" kind="function"><name>urlPrint</name></member>
     <member refid="rpm2xml_8c_1a983f3bd744dfd0845eb39e3e179eede4" kind="function"><name>xmlPrint</name></member>
   </compound>
-  <compound refid="xml2rss_8xsl" kind="file"><name>xml2rss.xsl</name>
-    <member refid="xml2rss_8xsl_1a618330d06280831751a51fb0dd2c2ebe" kind="variable"><name>__pad0__</name></member>
-    <member refid="xml2rss_8xsl_1ac521e5e43ae7dfe25ae807f46e649a92" kind="variable"><name>__pad1__</name></member>
-    <member refid="xml2rss_8xsl_1acf229077a8db23df99c19beb55caf714" kind="variable"><name>__pad2__</name></member>
-    <member refid="xml2rss_8xsl_1a1899afd4c8e74de239dd896c400fed7d" kind="variable"><name>__pad3__</name></member>
-    <member refid="xml2rss_8xsl_1a1a06f9c22bf87c9a10f7aa46479c70e9" kind="variable"><name>gt</name></member>
-    <member refid="xml2rss_8xsl_1a4d311d4d33f4cad6c79677baa9cf460d" kind="variable"><name>href</name></member>
-    <member refid="xml2rss_8xsl_1af6eaf5451d33323a7b1f53e11031796f" kind="variable"><name>http</name></member>
-    <member refid="xml2rss_8xsl_1a857c8c8ca640fb2283d751a715bd1ee9" kind="variable"><name>lt</name></member>
-  </compound>
   <compound refid="xmlsoft-xpath1_8c" kind="file"><name>xmlsoft-xpath1.c</name>
     <member refid="xmlsoft-xpath1_8c_1a840291bc02cba5474a4cb46a9b9566fe" kind="function"><name>main</name></member>
   </compound>
@@ -83,6 +73,8 @@
     <member refid="xmlsoft-xpath2_8c_1a840291bc02cba5474a4cb46a9b9566fe" kind="function"><name>main</name></member>
   </compound>
   <compound refid="md_htdocs_README" kind="page"><name>md_htdocs_README</name>
+  </compound>
+  <compound refid="todo" kind="page"><name>todo</name>
   </compound>
   <compound refid="dir_93c6ba7fb77bae0709fae89c9c13b44a" kind="dir"><name>java</name>
   </compound>

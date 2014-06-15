@@ -10,12 +10,13 @@
         <name>replacements</name>
         <initializer>= 0</initializer>
         <briefdescription>
-        </briefdescription>
+<para>counts the number of replacements completed </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/allan.clark/src/xpathtool/java/XPathSet.java" line="13" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathSet.java" bodystart="13" bodyend="-1"/>
+        <referencedby refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSet_1a8b260eecbaabcef8473fd87ada040682" compoundref="XPathSet_8java" startline="34" endline="134">XPathSet.main</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -64,22 +65,25 @@
 <para>-R sets a replacement pattern: ie /from/to/g : anything &quot;found&quot; while running a &quot;-f&quot; argument, all &quot;from&quot; are replaced by &quot;to&quot;. &quot;g&quot; as the last parameter allows multiple replacements per matching node </para></listitem>
 <listitem>
 <para>-F starts a search, triggering -R replacement on values on all matching nodes </para></listitem>
+<listitem>
+<para>-V shows version and quits </para></listitem>
 </itemizedlist>
 </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/allan.clark/src/xpathtool/java/XPathSet.java" line="33" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathSet.java" bodystart="33" bodyend="112"/>
-        <references refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1af1af4b7f062c6dd322b7e7a81209afb6" compoundref="XPathTool_8java" startline="129" endline="143">XPathTool.search</references>
+<para><xrefsect id="todo_1_todo000001"><xreftitle>Todo</xreftitle><xrefdescription><para>complete usage message </para></xrefdescription></xrefsect></para><para>default: case &apos;?&apos;: // falls-thru to usage</para><para>case &apos;H&apos;: tool.usage(g.progname()); break;</para>        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/java/XPathSet.java" line="34" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathSet.java" bodystart="34" bodyend="134"/>
+        <references refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSet_1aa0c54debf46b07b29e5d591b260c35f7" compoundref="XPathSet_8java" startline="13">XPathSet.replacements</references>
+        <references refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1af1af4b7f062c6dd322b7e7a81209afb6" compoundref="XPathTool_8java" startline="130" endline="144">XPathTool.search</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>A driving class to interpret commandline arguments and pass them to the underlying <ref refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool" kindref="compound">XPathTool</ref>. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/allan.clark/src/xpathtool/java/XPathSet.java" line="12" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathSet.java" bodystart="11" bodyend="113"/>
+    <location file="/Users/allan.clark/src/xpathtool/java/XPathSet.java" line="12" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathSet.java" bodystart="11" bodyend="135"/>
     <listofallmembers>
       <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSet_1a8b260eecbaabcef8473fd87ada040682" prot="public" virt="non-virtual"><scope>org::smallfoot::xpath::XPathSet</scope><name>main</name></member>
       <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSet_1aa0c54debf46b07b29e5d591b260c35f7" prot="private" virt="non-virtual"><scope>org::smallfoot::xpath::XPathSet</scope><name>replacements</name></member>

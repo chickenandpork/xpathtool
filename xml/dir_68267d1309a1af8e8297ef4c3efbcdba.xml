@@ -3,7 +3,6 @@
   <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
     <compoundname>src</compoundname>
     <innerfile refid="rpm2xml_8c">rpm2xml.c</innerfile>
-    <innerfile refid="xml2rss_8xsl">xml2rss.xsl</innerfile>
     <innerfile refid="xmlsoft-xpath1_8c">xmlsoft-xpath1.c</innerfile>
     <innerfile refid="xmlsoft-xpath2_8c">xmlsoft-xpath2.c</innerfile>
     <briefdescription>

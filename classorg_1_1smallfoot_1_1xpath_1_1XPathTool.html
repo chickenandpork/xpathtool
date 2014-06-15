@@ -25,7 +25,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">xpathtool
-   &#160;<span id="projectnumber">1.0-13</span>
+   &#160;<span id="projectnumber">1.0-16</span>
    </div>
   </td>
  </tr>
@@ -118,7 +118,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ad25ef6220eb54575157ab063bc63a0f0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad25ef6220eb54575157ab063bc63a0f0"></a>
-org.w3c.dom.Document&#160;</td><td class="memItemRight" valign="bottom"><b>xmlDocument</b></td></tr>
+org.w3c.dom.Document&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1smallfoot_1_1xpath_1_1XPathTool.html#ad25ef6220eb54575157ab063bc63a0f0">xmlDocument</a></td></tr>
+<tr class="memdesc:ad25ef6220eb54575157ab063bc63a0f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">holds the document for consideration <br/></td></tr>
 <tr class="separator:ad25ef6220eb54575157ab063bc63a0f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -214,6 +215,8 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="XPathTool_8java_source.html#l00050">50</a> of file <a class="el" href="XPathTool_8java_source.html">XPathTool.java</a>.</p>
 
+<p>References <a class="el" href="XPathTool_8java_source.html#l00019">XPathTool.xmlDocument</a>.</p>
+
 <p>Referenced by <a class="el" href="XPathTool_8java_source.html#l00061">XPathTool.load()</a>.</p>
 
 </div>
@@ -253,12 +256,14 @@ Here is the call graph for this function:</div>
     <tr><td class="paramname">java.io.FileNotFoundException</td><td>on issues creating the output filestream on xmlFile (ie missing interposing directory or permissions) </td></tr>
     <tr><td class="paramname">javax.xml.transform.TransformerConfigurationException</td><td>when the javax.xml.transform.TransformerFactory is butchered </td></tr>
     <tr><td class="paramname">javax.xml.transform.TransformerException</td><td>for exceptions on the final step, the transformation itself </td></tr>
-    <tr><td class="paramname"><a class="el" href="classorg_1_1smallfoot_1_1xpath_1_1NoDocumentException.html">org.smallfoot.xpath.NoDocumentException</a></td><td>if the user has tried to search before a document is loaded </td></tr>
+    <tr><td class="paramname"><a class="el" href="classorg_1_1smallfoot_1_1xpath_1_1NoDocumentException.html" title="Exception to show that no document has yet been loaded or is available for consideration. ">org.smallfoot.xpath.NoDocumentException</a></td><td>if the user has tried to search before a document is loaded </td></tr>
   </table>
   </dd>
 </dl>
 
 <p>Definition at line <a class="el" href="XPathTool_8java_source.html#l00087">87</a> of file <a class="el" href="XPathTool_8java_source.html">XPathTool.java</a>.</p>
+
+<p>References <a class="el" href="XPathTool_8java_source.html#l00019">XPathTool.xmlDocument</a>.</p>
 
 <p>Referenced by <a class="el" href="XPathTool_8java_source.html#l00106">XPathTool.save()</a>.</p>
 
@@ -398,14 +403,17 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classorg_1_1smallfoot_1_1xpath_1_1NoDocumentException.html">org.smallfoot.xpath.NoDocumentException</a></td><td>if the user has tried to search before a document is loaded </td></tr>
+    <tr><td class="paramname"><a class="el" href="classorg_1_1smallfoot_1_1xpath_1_1NoDocumentException.html" title="Exception to show that no document has yet been loaded or is available for consideration. ">org.smallfoot.xpath.NoDocumentException</a></td><td>if the user has tried to search before a document is loaded </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>list of matching nodes </dd></dl>
 
-<p>Definition at line <a class="el" href="XPathTool_8java_source.html#l00129">129</a> of file <a class="el" href="XPathTool_8java_source.html">XPathTool.java</a>.</p>
+<p>Definition at line <a class="el" href="XPathTool_8java_source.html#l00130">130</a> of file <a class="el" href="XPathTool_8java_source.html">XPathTool.java</a>.</p>
 
-<p>Referenced by <a class="el" href="XPathSub_8java_source.html#l00031">XPathSub.main()</a>, and <a class="el" href="XPathSet_8java_source.html#l00033">XPathSet.main()</a>.</p>
+<p>References <a class="el" href="XPathTool_8java_source.html#l00019">XPathTool.xmlDocument</a>.</p>
+
+<p>Referenced by <a class="el" href="XPathSub_8java_source.html#l00031">XPathSub.main()</a>, and <a class="el" href="XPathSet_8java_source.html#l00034">XPathSet.main()</a>.</p>
 
 </div>
 </div>
@@ -452,7 +460,7 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>number of matches made </dd></dl>
 
-<p>Definition at line <a class="el" href="XPathTool_8java_source.html#l00202">202</a> of file <a class="el" href="XPathTool_8java_source.html">XPathTool.java</a>.</p>
+<p>Definition at line <a class="el" href="XPathTool_8java_source.html#l00203">203</a> of file <a class="el" href="XPathTool_8java_source.html">XPathTool.java</a>.</p>
 
 </div>
 </div>
@@ -513,7 +521,7 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>number of matches made </dd></dl>
 
-<p>Definition at line <a class="el" href="XPathTool_8java_source.html#l00158">158</a> of file <a class="el" href="XPathTool_8java_source.html">XPathTool.java</a>.</p>
+<p>Definition at line <a class="el" href="XPathTool_8java_source.html#l00159">159</a> of file <a class="el" href="XPathTool_8java_source.html">XPathTool.java</a>.</p>
 
 </div>
 </div>
@@ -526,7 +534,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>org</b></li><li class="navelem"><b>smallfoot</b></li><li class="navelem"><b>xpath</b></li><li class="navelem"><a class="el" href="classorg_1_1smallfoot_1_1xpath_1_1XPathTool.html">XPathTool</a></li>
-    <li class="footer">Generated on Sat Jun 14 2014 16:44:50 for xpathtool by
+    <li class="footer">Generated on Sun Jun 15 2014 16:37:40 for xpathtool by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -14,19 +14,27 @@
           <array>[]</array>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>returns the version of the class; used to cause the build-time-detected version and buildid to be available by consumers of the generated xpathtool.jar file </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>for example: java -cp xpathtool.jar <ref refid="classorg_1_1smallfoot_1_1xpath_1_1version" kindref="compound">org.smallfoot.xpath.version</ref> 1.0.16</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ignored </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/allan.clark/src/xpathtool/java/version.java" line="5" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/version.java" bodystart="5" bodyend="8"/>
+        <location file="/Users/allan.clark/src/xpathtool/java/version.java" line="21" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/version.java" bodystart="21" bodyend="24"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>version is used to allow a package that uses this package to be able to &quot;ask&quot; the jar file what version it is </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/allan.clark/src/xpathtool/java/version.java" line="4" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/version.java" bodystart="3" bodyend="9"/>
+    <location file="/Users/allan.clark/src/xpathtool/java/version.java" line="11" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/version.java" bodystart="10" bodyend="25"/>
     <listofallmembers>
       <member refid="classorg_1_1smallfoot_1_1xpath_1_1version_1ae4faf7ff4190d227357ef851490d7757" prot="public" virt="non-virtual"><scope>org::smallfoot::xpath::version</scope><name>main</name></member>
     </listofallmembers>

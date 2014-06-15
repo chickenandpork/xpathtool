@@ -25,7 +25,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">xpathtool
-   &#160;<span id="projectnumber">1.0-13</span>
+   &#160;<span id="projectnumber">1.0-16</span>
    </div>
   </td>
  </tr>
@@ -79,7 +79,7 @@ $(document).ready(function(){initNavTree('XPathSub_8java_source.html','');});
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classorg_1_1smallfoot_1_1xpath_1_1XPathSub.html">   11</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classorg_1_1smallfoot_1_1xpath_1_1XPathSub.html">XPathSub</a> {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">int</span> replacements = 0;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classorg_1_1smallfoot_1_1xpath_1_1XPathSub.html#aa0c54debf46b07b29e5d591b260c35f7">   13</a></span>&#160;    <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code" href="classorg_1_1smallfoot_1_1xpath_1_1XPathSub.html#aa0c54debf46b07b29e5d591b260c35f7">replacements</a> = 0;               <span class="comment">/**&lt; counts the number of replacements completed */</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; <span class="comment"></span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    /**</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">     * Class Constructor, uncomplicated</span></div>
@@ -135,7 +135,7 @@ $(document).ready(function(){initNavTree('XPathSub_8java_source.html','');});
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">                 * String expression = &quot;//ScanTask[@name=&#39;VWVersionSearch&#39;]/@file&quot;;</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">                 */</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                expression = g.getOptarg();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keywordtype">int</span> replacements = 0;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keywordtype">int</span> <a class="code" href="classorg_1_1smallfoot_1_1xpath_1_1XPathSub.html#aa0c54debf46b07b29e5d591b260c35f7">replacements</a> = 0;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="keywordflow">try</span> {</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                replacements = tool.subAttr( (NodeList)tool.<a class="code" href="classorg_1_1smallfoot_1_1xpath_1_1XPathTool.html#af1af4b7f062c6dd322b7e7a81209afb6">search</a>(expression, XPathConstants.NODESET), editMatch, editReplace, global);</div>
@@ -163,7 +163,8 @@ $(document).ready(function(){initNavTree('XPathSub_8java_source.html','');});
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        }</div>
-<div class="ttc" id="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_html_af1af4b7f062c6dd322b7e7a81209afb6"><div class="ttname"><a href="classorg_1_1smallfoot_1_1xpath_1_1XPathTool.html#af1af4b7f062c6dd322b7e7a81209afb6">org.smallfoot.xpath.XPathTool.search</a></div><div class="ttdeci">Object search(String expression, QName returnType)</div><div class="ttdoc">Search the current XML Document for a match, returning a list of matching nodes. </div><div class="ttdef"><b>Definition:</b> <a href="XPathTool_8java_source.html#l00129">XPathTool.java:129</a></div></div>
+<div class="ttc" id="classorg_1_1smallfoot_1_1xpath_1_1XPathSub_html_aa0c54debf46b07b29e5d591b260c35f7"><div class="ttname"><a href="classorg_1_1smallfoot_1_1xpath_1_1XPathSub.html#aa0c54debf46b07b29e5d591b260c35f7">org.smallfoot.xpath.XPathSub.replacements</a></div><div class="ttdeci">int replacements</div><div class="ttdoc">counts the number of replacements completed </div><div class="ttdef"><b>Definition:</b> <a href="XPathSub_8java_source.html#l00013">XPathSub.java:13</a></div></div>
+<div class="ttc" id="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_html_af1af4b7f062c6dd322b7e7a81209afb6"><div class="ttname"><a href="classorg_1_1smallfoot_1_1xpath_1_1XPathTool.html#af1af4b7f062c6dd322b7e7a81209afb6">org.smallfoot.xpath.XPathTool.search</a></div><div class="ttdeci">Object search(String expression, QName returnType)</div><div class="ttdoc">Search the current XML Document for a match, returning a list of matching nodes. </div><div class="ttdef"><b>Definition:</b> <a href="XPathTool_8java_source.html#l00130">XPathTool.java:130</a></div></div>
 <div class="ttc" id="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_html"><div class="ttname"><a href="classorg_1_1smallfoot_1_1xpath_1_1XPathTool.html">org.smallfoot.xpath.XPathTool</a></div><div class="ttdoc">XPathTool is a relatively uncomplicated wrapper for an XPath action: it doesn&#39;t know what you&#39;re doin...</div><div class="ttdef"><b>Definition:</b> <a href="XPathTool_8java_source.html#l00017">XPathTool.java:17</a></div></div>
 <div class="ttc" id="classorg_1_1smallfoot_1_1xpath_1_1XPathSub_html_a8b260eecbaabcef8473fd87ada040682"><div class="ttname"><a href="classorg_1_1smallfoot_1_1xpath_1_1XPathSub.html#a8b260eecbaabcef8473fd87ada040682">org.smallfoot.xpath.XPathSub.main</a></div><div class="ttdeci">static void main(String[] args)</div><div class="ttdoc">main(args) handles the processing of arguments as sequential actions to pass to the underlying XPathT...</div><div class="ttdef"><b>Definition:</b> <a href="XPathSub_8java_source.html#l00031">XPathSub.java:31</a></div></div>
 <div class="ttc" id="classorg_1_1smallfoot_1_1xpath_1_1XPathSub_html_aae40faf18a11638688e225f28edd8cf4"><div class="ttname"><a href="classorg_1_1smallfoot_1_1xpath_1_1XPathSub.html#aae40faf18a11638688e225f28edd8cf4">org.smallfoot.xpath.XPathSub.XPathSub</a></div><div class="ttdeci">XPathSub()</div><div class="ttdoc">Class Constructor, uncomplicated. </div><div class="ttdef"><b>Definition:</b> <a href="XPathSub_8java_source.html#l00018">XPathSub.java:18</a></div></div>
@@ -174,7 +175,7 @@ $(document).ready(function(){initNavTree('XPathSub_8java_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_93c6ba7fb77bae0709fae89c9c13b44a.html">java</a></li><li class="navelem"><b>XPathSub.java</b></li>
-    <li class="footer">Generated on Sat Jun 14 2014 16:44:50 for xpathtool by
+    <li class="footer">Generated on Sun Jun 15 2014 16:37:39 for xpathtool by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

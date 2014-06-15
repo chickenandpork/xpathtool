@@ -10,12 +10,13 @@
         <name>replacements</name>
         <initializer>= 0</initializer>
         <briefdescription>
-        </briefdescription>
+<para>counts the number of replacements completed </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/allan.clark/src/xpathtool/java/XPathSub.java" line="13" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathSub.java" bodystart="13" bodyend="-1"/>
+        <referencedby refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSub_1a8b260eecbaabcef8473fd87ada040682" compoundref="XPathSub_8java" startline="31" endline="94">XPathSub.main</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -68,7 +69,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/allan.clark/src/xpathtool/java/XPathSub.java" line="31" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathSub.java" bodystart="31" bodyend="94"/>
-        <references refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1af1af4b7f062c6dd322b7e7a81209afb6" compoundref="XPathTool_8java" startline="129" endline="143">XPathTool.search</references>
+        <references refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSub_1aa0c54debf46b07b29e5d591b260c35f7" compoundref="XPathSub_8java" startline="13">XPathSub.replacements</references>
+        <references refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1af1af4b7f062c6dd322b7e7a81209afb6" compoundref="XPathTool_8java" startline="130" endline="144">XPathTool.search</references>
       </memberdef>
       </sectiondef>
     <briefdescription>

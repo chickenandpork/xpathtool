@@ -3,12 +3,14 @@ var NAVTREE =
   [ "xpathtool", "index.html", [
     [ "JavaDoc API Markup for xpathtool", "index.html", null ],
     [ "README", "md_htdocs_README.html", null ],
+    [ "Todo List", "todo.html", null ],
     [ "Data Structures", null, [
       [ "Data Structures", "annotated.html", "annotated" ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Data Fields", "functions.html", [
         [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ]
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
     [ "Files", null, [
