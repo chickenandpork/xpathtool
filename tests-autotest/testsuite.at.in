@@ -609,7 +609,8 @@ AT_CLEANUP()
 AT_SETUP(Version Output)
 dnl      --------------
 
-AT_CHECK([java -jar $abs_srcdir/../convjars/@PACKAGE@.jar -V], 0, [], [])
+AT_CHECK([java -jar $abs_srcdir/../convjars/@PACKAGE@.jar -V], 0, [@VERSION@-@BUILDID@
+], [])
 
 AT_CLEANUP()
 

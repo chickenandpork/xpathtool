@@ -126,6 +126,7 @@ AC_CONFIG_FILES(Makefile
   depjars/Makefile 
   java/Makefile
   java/version.java
+  java/XPathSet.java
   src/Makefile src/check_adhoc
   tests-autotest/Makefile tests-autotest/testsuite.at
 )
