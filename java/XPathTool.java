@@ -16,7 +16,7 @@ import org.w3c.dom.NodeList;
 
 public class XPathTool
 {
-    private org.w3c.dom.Document xmlDocument;
+    private org.w3c.dom.Document xmlDocument;		/**< holds the document for consideration */
 
     /**
      * Class Constructor to create with an initial file to load.
@@ -125,6 +125,7 @@ public class XPathTool
      * @param expression XPath expression to search for
      * @param returnType namespace context against which the expression is evaluated
      * @throws org.smallfoot.xpath.NoDocumentException if the user has tried to search before a document is loaded
+     * @return list of matching nodes
      */
     public Object search(String expression, QName returnType)
 	throws org.smallfoot.xpath.NoDocumentException

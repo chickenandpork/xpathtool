@@ -49,7 +49,7 @@ endif DO_GITFORMATTING
 endif DO_ASTYLE
 
 if DO_GITFORMATTING
-gitdescribe: .git/HEAD
+gitdescribe: .git/index
 	git describe > $@
 endif DO_GITFORMATTING
 

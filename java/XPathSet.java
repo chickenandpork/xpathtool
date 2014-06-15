@@ -10,7 +10,7 @@ import gnu.getopt.Getopt;
  */
 public class XPathSet
 {
-    private int replacements = 0;
+    private int replacements = 0;		/**< counts the number of replacements completed */
  
     /**
      * Class Constructor, uncomplicated

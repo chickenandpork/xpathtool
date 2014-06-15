@@ -1,7 +1,23 @@
 package org.smallfoot.xpath;
 
+/**
+ * @file
+ */
+
+/**
+ * version is used to allow a package that uses this package to be able to "ask" the jar file what version it is
+ */
 public class version
 {
+    /**
+     * returns the version of the class; used to cause the build-time-detected version and buildid to be available by consumers of the generated @PACKAGE@.jar file
+     *
+     * for example:
+     *     java -cp @PACKAGE@.jar org.smallfoot.xpath.version
+     *     @VERSION@.@BUILDID@
+     *
+     * @param arg ignored
+     */
     static public void main (String arg[])
     {
         System.out.println("@VERSION@.@BUILDID@");
