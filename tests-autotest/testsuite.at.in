@@ -606,6 +606,15 @@ AT_CLEANUP()
 
 
 
+AT_SETUP(Version Output)
+dnl      --------------
+
+AT_CHECK([java -jar $abs_srcdir/../convjars/@PACKAGE@.jar -V], 0, [], [])
+
+AT_CLEANUP()
+
+
+
 AT_SETUP(Doxygen confirmation of marked-up content)
 dnl      -----------------------------------------
 

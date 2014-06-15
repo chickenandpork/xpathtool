@@ -28,12 +28,13 @@ public class XPathSet
      *   <li>-f   starts a search, replacing the value of all matching nodes and attributes with the replacement (-r) value given</li>
      *   <li>-R   sets a replacement pattern: ie /from/to/g : anything "found" while running a "-f" argument, all "from" are replaced by "to".  "g" as the last parameter allows multiple replacements per matching node</li>
      *   <li>-F   starts a search, triggering -R replacement on values on all matching nodes</li>
+     *   <li>-V   shows version and quits</li>
      * </ul>
      */
     public static void main(String[] args)
     {
         XPathTool tool = new XPathTool();
-    	Getopt g = new Getopt("XPathSet", args, "i:o:r:f:R:F:");
+    	Getopt g = new Getopt("XPathSet", args, "i:o:r:f:R:F:V");
     	int c; String arg;
 	String replace = "";
         String editMatch = "";
@@ -107,6 +108,27 @@ public class XPathSet
        		case 'i':       // open a new file
        		tool.load(g.getOptarg());
        		break;
+
+
+                /*
+                 * Follows is the "house-keeping": versions, ( @todo ) usage, and the catch-all for bad options.
+                 */
+                case 'V':   // print the version and quit
+                {
+                    System.out.println("@VERSION@-@BUILDID@");
+                    return;
+                }
+
+		/**
+		 * @todo complete usage message 
+		 * 
+                 * default:
+                 * case '?': // falls-thru to usage
+		 * 
+                 * case 'H':
+                 *     tool.usage(g.progname());
+                 *     break;
+		 */
 	    }
    	}
     }
