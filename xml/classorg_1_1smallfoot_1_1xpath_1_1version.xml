@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
   <compounddef id="classorg_1_1smallfoot_1_1xpath_1_1version" kind="class" prot="public">
     <compoundname>org::smallfoot::xpath::version</compoundname>
       <sectiondef kind="public-static-func">
@@ -16,7 +16,7 @@
         <briefdescription>
 <para>returns the version of the class; used to cause the build-time-detected version and buildid to be available by consumers of the generated xpathtool.jar file </para>        </briefdescription>
         <detaileddescription>
-<para>for example: java -cp xpathtool.jar <ref refid="classorg_1_1smallfoot_1_1xpath_1_1version" kindref="compound">org.smallfoot.xpath.version</ref> 1.0.16</para><para><parameterlist kind="param"><parameteritem>
+<para>for example: java -cp xpathtool.jar <ref refid="classorg_1_1smallfoot_1_1xpath_1_1version" kindref="compound">org.smallfoot.xpath.version</ref> 1.0.20</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>arg</parametername>
 </parameternamelist>

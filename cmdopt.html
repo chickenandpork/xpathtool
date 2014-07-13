@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>xpathtool: java/XPathException.java Source File</title>
+<title>xpathtool: Commandline Options</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,14 +37,9 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li class="current"><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
-      <li class="current"><a href="files.html"><span>Files</span></a></li>
-    </ul>
-  </div>
-  <div id="navrow2" class="tabs2">
-    <ul class="tablist">
-      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -59,26 +54,35 @@
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('XPathException_8java_source.html','');});
+$(document).ready(function(){initNavTree('cmdopt.html','');});
 </script>
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">XPathException.java</div>  </div>
+<div class="title">Commandline Options </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>org.smallfoot.xpath ;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">class </span>XPathException <span class="keyword">extends</span> Exception {</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;        XPathException(String m) { super(m); }</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;}</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-</div><!-- fragment --></div><!-- contents -->
+<div class="textblock"><dl class="reflist">
+<dt><a class="anchor" id="_cmdopt000001"></a>Global <a class="el" href="classorg_1_1smallfoot_1_1xpath_1_1XPathSet.html#a8b260eecbaabcef8473fd87ada040682">XPathSet.main</a>  (String[] args)</dt>
+<dd><p class="startdd">-F execute a search using the replacement already registered: for each matching node, execute the replacement </p>
+<div class="fragment"><div class="line">java -jar xpathtool.jar -i .. -r .. -F <span class="stringliteral">&quot;//ScanTask[@name=&#39;VWVersionSearch&#39;]/@file&quot;</span> -o .. </div>
+</div><!-- fragment --> <p>The format of the search string is a standard <a href="http://www.w3.org/TR/xpath/">XPath</a> expression </p><dl class="section see"><dt>See also</dt><dd><a href="http://en.wikipedia.org/wiki/XPath">http://en.wikipedia.org/wiki/XPath</a> </dd>
+<dd>
+<a href="http://www.w3.org/TR/xpath/">http://www.w3.org/TR/xpath/</a> </dd></dl>
+<p>-o save an XML file after editing </p>
+<p>-i read in an XML file for editing </p>
+<p>-H Show a simple help screen as a reminder of options which are understood by the application </p>
+<div class="fragment"><div class="line">java -jar xpathtool.jar --help </div>
+</div><!-- fragment --><p>-V Show the current release version for reference </p>
+<div class="fragment"><div class="line">java -jar xpathtool.jar -V</div>
+<div class="line">1.0-20 </div>
+</div><!-- fragment --> </dd>
+</dl>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_93c6ba7fb77bae0709fae89c9c13b44a.html">java</a></li><li class="navelem"><b>XPathException.java</b></li>
     <li class="footer">Generated on Mon Jul 14 2014 02:34:07 for xpathtool by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>

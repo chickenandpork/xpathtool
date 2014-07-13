@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
   <compounddef id="classorg_1_1smallfoot_1_1xpath_1_1XPathSet" kind="class" prot="public">
     <compoundname>org::smallfoot::xpath::XPathSet</compoundname>
       <sectiondef kind="private-attrib">
@@ -16,7 +16,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/allan.clark/src/xpathtool/java/XPathSet.java" line="13" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathSet.java" bodystart="13" bodyend="-1"/>
-        <referencedby refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSet_1a8b260eecbaabcef8473fd87ada040682" compoundref="XPathSet_8java" startline="34" endline="134">XPathSet.main</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -73,20 +72,57 @@
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
-<para><xrefsect id="todo_1_todo000001"><xreftitle>Todo</xreftitle><xrefdescription><para>complete usage message </para></xrefdescription></xrefsect></para><para>default: case &apos;?&apos;: // falls-thru to usage</para><para>case &apos;H&apos;: tool.usage(g.progname()); break;</para>        </inbodydescription>
-        <location file="/Users/allan.clark/src/xpathtool/java/XPathSet.java" line="34" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathSet.java" bodystart="34" bodyend="134"/>
-        <references refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSet_1aa0c54debf46b07b29e5d591b260c35f7" compoundref="XPathSet_8java" startline="13">XPathSet.replacements</references>
+<para><xrefsect id="cmdopt_1_cmdopt000001"><xreftitle>Commandline Options</xreftitle><xrefdescription><para>-F execute a search using the replacement already registered: for each matching node, execute the replacement </para></xrefdescription></xrefsect><xrefsect id="cmdopt_1_cmdopt000002"><xreftitle>Commandline Options</xreftitle><xrefdescription><para><programlisting><codeline><highlight class="normal">java<sp/>-jar<sp/>xpathtool.jar<sp/>-i<sp/>..<sp/>-r<sp/>..<sp/>-F<sp/></highlight><highlight class="stringliteral">&quot;//ScanTask[@name=&apos;VWVersionSearch&apos;]/@file&quot;</highlight><highlight class="normal"><sp/>-o<sp/>..<sp/></highlight></codeline>
+</programlisting> </para></xrefdescription></xrefsect><xrefsect id="cmdopt_1_cmdopt000003"><xreftitle>Commandline Options</xreftitle><xrefdescription><para>The format of the search string is a standard <ulink url="http://www.w3.org/TR/xpath/">XPath</ulink> expression <simplesect kind="see"><para><ulink url="http://en.wikipedia.org/wiki/XPath">http://en.wikipedia.org/wiki/XPath</ulink> </para></simplesect>
+<simplesect kind="see"><para><ulink url="http://www.w3.org/TR/xpath/">http://www.w3.org/TR/xpath/</ulink> </para></simplesect>
+</para></xrefdescription></xrefsect></para><para><xrefsect id="cmdopt_1_cmdopt000004"><xreftitle>Commandline Options</xreftitle><xrefdescription><para>-o save an XML file after editing </para></xrefdescription></xrefsect></para><para><xrefsect id="cmdopt_1_cmdopt000005"><xreftitle>Commandline Options</xreftitle><xrefdescription><para>-i read in an XML file for editing </para></xrefdescription></xrefsect></para><para>Always always ALWAYS provide a quick reference and a version output</para><para><xrefsect id="cmdopt_1_cmdopt000006"><xreftitle>Commandline Options</xreftitle><xrefdescription><para>-H Show a simple help screen as a reminder of options which are understood by the application </para></xrefdescription></xrefsect><xrefsect id="cmdopt_1_cmdopt000007"><xreftitle>Commandline Options</xreftitle><xrefdescription><para><programlisting><codeline><highlight class="normal">java<sp/>-jar<sp/>xpathtool.jar<sp/>--help<sp/></highlight></codeline>
+</programlisting></para></xrefdescription></xrefsect></para><para><xrefsect id="cmdopt_1_cmdopt000008"><xreftitle>Commandline Options</xreftitle><xrefdescription><para>-V Show the current release version for reference </para></xrefdescription></xrefsect><xrefsect id="cmdopt_1_cmdopt000009"><xreftitle>Commandline Options</xreftitle><xrefdescription><para><programlisting><codeline><highlight class="normal">java<sp/>-jar<sp/>xpathtool.jar<sp/>-V</highlight></codeline>
+<codeline><highlight class="normal">1.0-20<sp/></highlight></codeline>
+</programlisting> </para></xrefdescription></xrefsect></para><para><xrefsect id="todo_1_todo000001"><xreftitle>Todo</xreftitle><xrefdescription><para>complete usage message </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/java/XPathSet.java" line="50" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathSet.java" bodystart="50" bodyend="172"/>
+        <references refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1a06e5248d8619f00173d9794f30966dc3" compoundref="XPathTool_8java" startline="61" endline="73">XPathTool.load</references>
+        <references refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1aa9370fe3a8b0b2d5b91a76190c1599e0" compoundref="XPathTool_8java" startline="106" endline="119">XPathTool.save</references>
         <references refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1af1af4b7f062c6dd322b7e7a81209afb6" compoundref="XPathTool_8java" startline="130" endline="144">XPathTool.search</references>
+        <references refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1aef43485334ab87e6db498fe403162255" compoundref="XPathTool_8java" startline="203" endline="229">XPathTool.setAttr</references>
+        <references refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool_1a2e34675797f629121c1b2a74a19ebd34" compoundref="XPathTool_8java" startline="159" endline="192">XPathTool.subAttr</references>
+        <references refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSet_1aec331730d71546f53ebc29753cdfd8a2" compoundref="XPathSet_8java" startline="24" endline="32">XPathSet.usage</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1xpath_1_1XPathSet_1aec331730d71546f53ebc29753cdfd8a2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usage</definition>
+        <argsstring>(String proc)</argsstring>
+        <name>usage</name>
+        <param>
+          <type>String</type>
+          <declname>proc</declname>
+        </param>
+        <briefdescription>
+<para>usage messages are useful to those of us with short memories as well (hey, I just need to add swap!) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>proc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the process or program (ie wwndesc) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/xpathtool/java/XPathSet.java" line="24" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathSet.java" bodystart="24" bodyend="32"/>
+        <referencedby refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSet_1a8b260eecbaabcef8473fd87ada040682" compoundref="XPathSet_8java" startline="50" endline="172">XPathSet.main</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>A driving class to interpret commandline arguments and pass them to the underlying <ref refid="classorg_1_1smallfoot_1_1xpath_1_1XPathTool" kindref="compound">XPathTool</ref>. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/allan.clark/src/xpathtool/java/XPathSet.java" line="12" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathSet.java" bodystart="11" bodyend="135"/>
+    <location file="/Users/allan.clark/src/xpathtool/java/XPathSet.java" line="12" column="1" bodyfile="/Users/allan.clark/src/xpathtool/java/XPathSet.java" bodystart="11" bodyend="173"/>
     <listofallmembers>
       <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSet_1a8b260eecbaabcef8473fd87ada040682" prot="public" virt="non-virtual"><scope>org::smallfoot::xpath::XPathSet</scope><name>main</name></member>
       <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSet_1aa0c54debf46b07b29e5d591b260c35f7" prot="private" virt="non-virtual"><scope>org::smallfoot::xpath::XPathSet</scope><name>replacements</name></member>
+      <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSet_1aec331730d71546f53ebc29753cdfd8a2" prot="public" virt="non-virtual"><scope>org::smallfoot::xpath::XPathSet</scope><name>usage</name></member>
       <member refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSet_1ae221980d06d6b6137ff05ac3deb5d62e" prot="public" virt="non-virtual"><scope>org::smallfoot::xpath::XPathSet</scope><name>XPathSet</name></member>
     </listofallmembers>
   </compounddef>

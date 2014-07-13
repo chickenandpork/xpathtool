@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
+  <compounddef id="cmdopt" kind="page">
+    <compoundname>cmdopt</compoundname>
+    <title>Commandline Options</title>
+    <detaileddescription>
+<para><variablelist>
+<varlistentry><term><anchor id="cmdopt_1_cmdopt000001"/>Global <ref refid="classorg_1_1smallfoot_1_1xpath_1_1XPathSet_1a8b260eecbaabcef8473fd87ada040682" kindref="member">XPathSet.main</ref>  (String[] args)</term></varlistentry>
+<listitem><para>-F execute a search using the replacement already registered: for each matching node, execute the replacement </para><para><programlisting><codeline><highlight class="normal">java<sp/>-jar<sp/>xpathtool.jar<sp/>-i<sp/>..<sp/>-r<sp/>..<sp/>-F<sp/></highlight><highlight class="stringliteral">&quot;//ScanTask[@name=&apos;VWVersionSearch&apos;]/@file&quot;</highlight><highlight class="normal"><sp/>-o<sp/>..<sp/></highlight></codeline>
+</programlisting> </para><para>The format of the search string is a standard <ulink url="http://www.w3.org/TR/xpath/">XPath</ulink> expression <simplesect kind="see"><para><ulink url="http://en.wikipedia.org/wiki/XPath">http://en.wikipedia.org/wiki/XPath</ulink> </para></simplesect>
+<simplesect kind="see"><para><ulink url="http://www.w3.org/TR/xpath/">http://www.w3.org/TR/xpath/</ulink> </para></simplesect>
+-o save an XML file after editing </para><para>-i read in an XML file for editing </para><para>-H Show a simple help screen as a reminder of options which are understood by the application </para><para><programlisting><codeline><highlight class="normal">java<sp/>-jar<sp/>xpathtool.jar<sp/>--help<sp/></highlight></codeline>
+</programlisting></para><para>-V Show the current release version for reference </para><para><programlisting><codeline><highlight class="normal">java<sp/>-jar<sp/>xpathtool.jar<sp/>-V</highlight></codeline>
+<codeline><highlight class="normal">1.0-20<sp/></highlight></codeline>
+</programlisting> </para></listitem>
+</variablelist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

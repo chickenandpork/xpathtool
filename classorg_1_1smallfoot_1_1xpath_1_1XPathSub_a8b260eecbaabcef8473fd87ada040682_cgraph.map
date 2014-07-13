@@ -1,3 +1,8 @@
 <map id="main" name="main">
-<area shape="rect" id="node2" href="$classorg_1_1smallfoot_1_1xpath_1_1XPathTool.html#af1af4b7f062c6dd322b7e7a81209afb6" title="Search the current XML Document for a match, returning a list of matching nodes. " alt="" coords="105,5,279,43"/>
+<area shape="rect" id="node2" href="$classorg_1_1smallfoot_1_1xpath_1_1XPathTool.html#a06e5248d8619f00173d9794f30966dc3" title="Wrapper to just load the file, spitting out exceptions and stacks as they occur. " alt="" coords="105,5,279,43"/>
+<area shape="rect" id="node4" href="$classorg_1_1smallfoot_1_1xpath_1_1XPathTool.html#aa9370fe3a8b0b2d5b91a76190c1599e0" title="Wrapper to just save the file, spitting out exceptions and stacks as they occur. " alt="" coords="105,67,279,106"/>
+<area shape="rect" id="node6" href="$classorg_1_1smallfoot_1_1xpath_1_1XPathTool.html#af1af4b7f062c6dd322b7e7a81209afb6" title="Search the current XML Document for a match, returning a list of matching nodes. " alt="" coords="105,130,279,169"/>
+<area shape="rect" id="node7" href="$classorg_1_1smallfoot_1_1xpath_1_1XPathTool.html#a2e34675797f629121c1b2a74a19ebd34" title="Consume a list of matches, and for each node (entity or attribute) make a Strong.replaceFirst() or a ..." alt="" coords="105,193,279,231"/>
+<area shape="rect" id="node3" href="$classorg_1_1smallfoot_1_1xpath_1_1XPathTool.html#adc3a8f6eb0246c78615de6cc346d4f99" title="Open a file. " alt="" coords="329,5,503,43"/>
+<area shape="rect" id="node5" href="$classorg_1_1smallfoot_1_1xpath_1_1XPathTool.html#adb7f600accd4a29f376ce8e52edff11a" title="Save the current XML Document to a new file. " alt="" coords="329,67,503,106"/>
 </map>

@@ -1,0 +1,37 @@
+
+\begin{DoxyRefList}
+\item[\label{cmdopt__cmdopt000001}%
+Global \doxyref{X\+Path\+Set.main}{p.}{classorg_1_1smallfoot_1_1xpath_1_1XPathSet_a8b260eecbaabcef8473fd87ada040682} (String\mbox{[}\mbox{]} args)]-\/\+F execute a search using the replacement already registered\+: for each matching node, execute the replacement 
+
+
+\begin{DoxyCode}
+java -jar xpathtool.jar -i .. -r .. -F \textcolor{stringliteral}{"//ScanTask[@name='VWVersionSearch']/@file"} -o .. 
+\end{DoxyCode}
+ 
+
+The format of the search string is a standard {\tt X\+Path} expression \begin{DoxySeeAlso}{See also}
+{\tt http\+://en.\+wikipedia.\+org/wiki/\+X\+Path} 
+
+{\tt http\+://www.\+w3.\+org/\+T\+R/xpath/} 
+\end{DoxySeeAlso}
+-\/o save an X\+M\+L file after editing 
+
+-\/i read in an X\+M\+L file for editing 
+
+-\/\+H Show a simple help screen as a reminder of options which are understood by the application 
+
+
+\begin{DoxyCode}
+java -jar xpathtool.jar --help 
+\end{DoxyCode}
+
+
+-\/\+V Show the current release version for reference 
+
+
+\begin{DoxyCode}
+java -jar xpathtool.jar -V
+1.0-20 
+\end{DoxyCode}
+ 
+\end{DoxyRefList}
