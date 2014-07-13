@@ -17,6 +17,22 @@ public class XPathSet
      */
     public XPathSet() { }
 
+    /** usage messages are useful to those of us with short memories as well (hey, I just need to add swap!)
+     *
+     * @param proc name of the process or program (ie wwndesc)
+     */
+    public static void usage(String proc)
+    {
+        System.out.println("Usage: "+proc+" -V|-H");
+
+        System.out.println("     : "+proc+" -i {file} [ -r {value} [ -f {search} [ -f {search} ]]].. -o {file}");
+        System.out.println("     : "+proc+" -i {file} [ -R {/from/to/[g]} [ -f {search} [ -f {search} ]]].. -o {file}");
+        System.out.println("     : "+proc+" -i {file} [ -r {value} [ -F {search} [ -f {search} ]]].. -o {file}");
+        System.out.println("   ie: "+proc+" -i EDD_TEXT.xml -r newvalue -f \"//ScanTask[[@name='XYZVersionSearch']]/@file\" -o EDD_NEW.xml");
+    }
+
+
+
     /**
      * main(args) handles the processing of arguments as sequential actions to pass to the underlying XPathTool.
      *
@@ -86,6 +102,11 @@ public class XPathSet
                         global = false;
                 break;
 
+                /**
+		 * @cmdopt -F execute a search using the replacement already registered: for each matching node, execute the replacement
+                 * @cmdopt @code java -jar @PACKAGE@.jar -i .. -r .. -F "//ScanTask[@name='VWVersionSearch']/@file" -o .. @endcode
+                 * @cmdopt The format of the search string is a standard <a href="http://www.w3.org/TR/xpath/">XPath</a> expression @sa http://en.wikipedia.org/wiki/XPath @sa http://www.w3.org/TR/xpath/
+                 */
                 case 'F':
                 /*
                  * String expression = "//ScanTask[@name='VWVersionSearch']/@file";
@@ -101,14 +122,31 @@ public class XPathSet
                 System.out.println (substitutions + " substitutions.");
                 break;
 
+                /**
+		 * @cmdopt -o save an XML file after editing
+                 */
        		case 'o':       // output the current file
        		tool.save(g.getOptarg());
        		break;
 
+                /**
+		 * @cmdopt -i read in an XML file for editing
+                 */
        		case 'i':       // open a new file
        		tool.load(g.getOptarg());
        		break;
 
+
+                /**
+                 * Always always ALWAYS provide a quick reference and a version output
+                 *
+                 * @cmdopt -H Show a simple help screen as a reminder of options which are understood by the application
+                 * @cmdopt @code java -jar @PACKAGE@.jar --help @endcode
+                 *
+                 * @cmdopt -V Show the current release version for reference
+                 * @cmdopt @code java -jar @PACKAGE@.jar -V
+                 *  @VERSION@-@BUILDID@ @endcode
+                 */
 
                 /*
                  * Follows is the "house-keeping": versions, ( @todo ) usage, and the catch-all for bad options.
@@ -121,14 +159,14 @@ public class XPathSet
 
 		/**
 		 * @todo complete usage message 
-		 * 
-                 * default:
-                 * case '?': // falls-thru to usage
-		 * 
-                 * case 'H':
-                 *     tool.usage(g.progname());
-                 *     break;
 		 */
+
+                default:
+                case '?': // falls-thru to usage
+
+                case 'H':
+                    XPathSet.usage("XPathSet");
+                    break;
 	    }
    	}
     }
