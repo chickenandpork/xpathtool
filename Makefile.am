@@ -8,7 +8,7 @@ SUBDIRS +=	tests-autotest
 ACLOCAL_AMFLAGS = -I m4
 
 # if missing mkinstalldirs install-sh trigger errors, ignore the result code on the "system (cp ...)" command in automake
-dnl CONFIG_CLEAN_FILES = aclocal.m4 config.guess config.sub config.h config.h.in ltconfig ltmain.sh missing mkinstalldirs install-sh Doxyfile @PACKAGE@.spec @PACKAGE@.jar changes.atom
+# CONFIG_CLEAN_FILES = aclocal.m4 config.guess config.sub config.h config.h.in ltconfig ltmain.sh missing mkinstalldirs install-sh Doxyfile @PACKAGE@.spec @PACKAGE@.jar changes.atom
 CONFIG_STATUS_DEPENDENCIES = gitdescribe
 EXTRA_DIST = @PACKAGE@.spec gitdescribe
 
@@ -56,6 +56,23 @@ endif DO_GITFORMATTING
 
 
 if HAVE_RPMBUILD
+srpm: distcheck
+        @mkdir -p $$(rpm --eval '%{_srcrpmdir}')
+        @RPMBUILD@ -ts $(PACKAGE)-$(VERSION).tar.bz2
+if DO_SUDOPOSTMOVE
+        mv $$(rpm --eval '%{_srcrpmdir}')/@PACKAGE@-$$(rpm --qf '%{VERSION}\n' -q --specfile @PACKAGE@.spec |head -1)-$$(rpm --qf '%{RELEASE}\n' -q --specfile @PACKAGE@.spec |head -1).src.rpm @SUDOPOSTMOVE@
+endif   DO_SUDOPOSTMOVE
+
+if DO_GITFORMATTING
+re-dist-bzip2: gitdescribe
+        rm -f @PACKAGE@.spec $(PACKAGE)-$(VERSION).tar.bz2
+        touch configure
+        $(MAKE) dist-bzip2
+rpm: re-dist-bzip2
+else DO_GITFORMATTING_FALSE
 rpm: dist-bzip2
-	@RPMBUILD@ --define 'skipcheck 1' -ta $(PACKAGE)-$(VERSION).tar.bz2
-endif
+endif DO_GITFORMATTING_FALSE
+        @RPMBUILD@ --define 'skipcheck 1' -ta $(PACKAGE)-$(VERSION).tar.bz2
+endif HAVE_RPMBUILD
+
+

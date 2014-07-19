@@ -121,6 +121,22 @@ AC_SUBST([GETOPTJAR], ${WITH_GETOPTJAR})
 
 
 
+AC_ARG_WITH(sudopostmove,
+[AS_HELP_STRING([--with-sudopostmove],[Enable sudopostmove of a built RPM; default=disabled])],
+[
+    case "$withval" in
+        "no")  WITH_SUDOPOSTMOVE=no  ;;
+        *) WITH_SUDOPOSTMOVE="$withval" ;;
+    esac
+],
+[
+    WITH_SUDOPOSTMOVE=no
+])
+AM_CONDITIONAL(DO_SUDOPOSTMOVE, test "$WITH_SUDOPOSTMOVE" != no)
+AC_SUBST([SUDOPOSTMOVE], ${WITH_SUDOPOSTMOVE})
+
+
+
 AC_CONFIG_FILES(Makefile
   convjars/Makefile 
   depjars/Makefile 
