@@ -31,7 +31,7 @@ AT_DATA([EDD_TEXT.xml],[<?xml version="1.0" standalone="yes"?>
 </PersistedData>
 ])
 AT_CHECK([/usr/bin/xmllint -noout EDD_TEXT.xml], 0,[ignore],[ignore])
-AT_CHECK([java -classpath $abs_srcdir/../convjars/@PACKAGE@.jar org.smallfoot.xpath.XPathSet -i EDD_TEXT.xml -r bark -f "//ScanTask[[@name='XYZVersionSearch']]/@file" -o EDD_NEW.xml], 0,[ignore],[ignore])
+AT_CHECK([java -classpath $abs_top_builddir/convjars/@PACKAGE@.jar org.smallfoot.xpath.XPathSet -i EDD_TEXT.xml -r bark -f "//ScanTask[[@name='XYZVersionSearch']]/@file" -o EDD_NEW.xml], 0,[ignore],[ignore])
 AT_CHECK([/usr/bin/xmllint -noout EDD_NEW.xml], 0,[ignore],[ignore])
 AT_CHECK([/usr/bin/xmllint -format EDD_NEW.xml], 0,[<?xml version="1.0" encoding="UTF-8"?>
 <PersistedData>
@@ -59,7 +59,7 @@ AT_CHECK([/usr/bin/xmllint -format EDD_NEW.xml], 0,[<?xml version="1.0" encoding
 </PersistedData>
 ],[ignore])
 
-AT_CHECK([java -classpath $abs_srcdir/../convjars/@PACKAGE@.jar org.smallfoot.xpath.XPathSet -i EDD_TEXT.xml -r bark -f "//ScanTask[[@name='XYZVersionSearch']]/@file" -r check -f "//ScanTask[[@name='XYZVersionSearch']]/@file" -o EDD_NEW.xml], 0,[ignore],[ignore])
+AT_CHECK([java -classpath $abs_top_builddir/convjars/@PACKAGE@.jar org.smallfoot.xpath.XPathSet -i EDD_TEXT.xml -r bark -f "//ScanTask[[@name='XYZVersionSearch']]/@file" -r check -f "//ScanTask[[@name='XYZVersionSearch']]/@file" -o EDD_NEW.xml], 0,[ignore],[ignore])
 AT_CHECK([/usr/bin/xmllint -noout EDD_NEW.xml], 0,[ignore],[ignore])
 AT_CHECK([/usr/bin/xmllint -format EDD_NEW.xml], 0,[<?xml version="1.0" encoding="UTF-8"?>
 <PersistedData>
@@ -88,7 +88,7 @@ AT_CHECK([/usr/bin/xmllint -format EDD_NEW.xml], 0,[<?xml version="1.0" encoding
 ],[ignore])
 
 dnl same check, but using java -jar
-AT_CHECK([java -jar $abs_srcdir/../convjars/@PACKAGE@.jar -i EDD_TEXT.xml -r bark -f "//ScanTask[[@name='XYZVersionSearch']]/@file" -r check -f "//ScanTask[[@name='XYZVersionSearch']]/@file" -o EDD_NEW.xml], 0,[ignore],[ignore])
+AT_CHECK([java -jar $abs_top_builddir/convjars/@PACKAGE@.jar -i EDD_TEXT.xml -r bark -f "//ScanTask[[@name='XYZVersionSearch']]/@file" -r check -f "//ScanTask[[@name='XYZVersionSearch']]/@file" -o EDD_NEW.xml], 0,[ignore],[ignore])
 AT_CHECK([/usr/bin/xmllint -noout EDD_NEW.xml], 0,[ignore],[ignore])
 AT_CHECK([/usr/bin/xmllint -format EDD_NEW.xml], 0,[<?xml version="1.0" encoding="UTF-8"?>
 <PersistedData>
@@ -134,7 +134,7 @@ AT_DATA([xgEnterpriseProxy.xml],[<?xml version="1.0" standalone="yes"?>
 </PersistedData>
 ])
 
-AT_CHECK([java -classpath $abs_srcdir/../convjars/@PACKAGE@.jar org.smallfoot.xpath.XPathSet -i xgEnterpriseProxy.xml -r xyzcheesefactory-sandbox.axeda.com -f "//s[1]" -o xgEnterpriseNew.xml],0,[ignore],[ignore])
+AT_CHECK([java -classpath $abs_top_builddir/convjars/@PACKAGE@.jar org.smallfoot.xpath.XPathSet -i xgEnterpriseProxy.xml -r xyzcheesefactory-sandbox.axeda.com -f "//s[1]" -o xgEnterpriseNew.xml],0,[ignore],[ignore])
 AT_CHECK([/usr/bin/xmllint -noout xgEnterpriseNew.xml], 0,[ignore],[ignore])
 AT_CHECK([/usr/bin/xmllint -format xgEnterpriseNew.xml], 0,[<?xml version="1.0" encoding="UTF-8"?>
 <PersistedData TerseType="1">
@@ -167,7 +167,7 @@ AT_DATA([xgLicense.xml],[<?xml version="1.0" standalone="yes"?>
 </PersistedData>
 ])
 
-AT_CHECK([java -classpath $abs_srcdir/../convjars/@PACKAGE@.jar org.smallfoot.xpath.XPathSet -i xgLicense.xml -r '"XYZ3-Win2k8"' -f "//s[[2]]" -o xgLicenseNew.xml],0,[ignore],[ignore])
+AT_CHECK([java -classpath $abs_top_builddir/convjars/@PACKAGE@.jar org.smallfoot.xpath.XPathSet -i xgLicense.xml -r '"XYZ3-Win2k8"' -f "//s[[2]]" -o xgLicenseNew.xml],0,[ignore],[ignore])
 AT_CHECK([/usr/bin/xmllint -noout xgLicenseNew.xml], 0,[ignore],[ignore])
 AT_CHECK([/usr/bin/xmllint -format xgLicenseNew.xml], 0,[<?xml version="1.0" encoding="UTF-8"?>
 <PersistedData TerseType="1">
@@ -195,7 +195,7 @@ AT_DATA([zeke-filter-one.xml], [<?xml version="1.0" encoding="UTF-8"?>
 </filterlist>
 ])
 
-AT_CHECK([$abs_srcdir/../src/xpathset zeke-filter-one.xml "//filter[[@metricversion='21']]/@metricversion" 18],0, [<?xml version="1.0" encoding="UTF-8"?>
+AT_CHECK([$abs_top_builddir/src/xpathset zeke-filter-one.xml "//filter[[@metricversion='21']]/@metricversion" 18],0, [<?xml version="1.0" encoding="UTF-8"?>
 <filterlist>
   <filter majorversion="4" minorversion="0" name="Exclude known Queue Depth Violators" global="true" metricversion="18" containertype="ScsiItl" pregroupbyfilter="true">
     <metricexpression metricversion="21" containertype="ScsiItl">
@@ -209,7 +209,7 @@ AT_CHECK([$abs_srcdir/../src/xpathset zeke-filter-one.xml "//filter[[@metricvers
 ],[ignore])
 
 dnl same test, but using java -jar xpath.jar
-AT_CHECK([java -jar $abs_srcdir/../convjars/@PACKAGE@.jar -i zeke-filter-one.xml -r 18 -f "//filter[[@metricversion='21']]/@metricversion" -o zeke-filter-one-test.xml], 0,[ignore],[ignore])
+AT_CHECK([java -jar $abs_top_builddir/convjars/@PACKAGE@.jar -i zeke-filter-one.xml -r 18 -f "//filter[[@metricversion='21']]/@metricversion" -o zeke-filter-one-test.xml], 0,[ignore],[ignore])
 AT_CHECK([/usr/bin/xmllint -format zeke-filter-one-test.xml ], 0, [<?xml version="1.0" encoding="UTF-8"?>
 <filterlist>
   <filter containertype="ScsiItl" global="true" majorversion="4" metricversion="18" minorversion="0" name="Exclude known Queue Depth Violators" pregroupbyfilter="true">
@@ -223,7 +223,7 @@ AT_CHECK([/usr/bin/xmllint -format zeke-filter-one-test.xml ], 0, [<?xml version
 </filterlist>
 ],[ignore])
 
-AT_CHECK([$abs_srcdir/../src/xpathset zeke-filter-one.xml "//*[[@containertype='ScsiItl' and @metricversion='21']]/@metricversion" 18 | sed -e 's/_FCX_/_FC8_/g'],0, [<?xml version="1.0" encoding="UTF-8"?>
+AT_CHECK([$abs_top_builddir/src/xpathset zeke-filter-one.xml "//*[[@containertype='ScsiItl' and @metricversion='21']]/@metricversion" 18 | sed -e 's/_FCX_/_FC8_/g'],0, [<?xml version="1.0" encoding="UTF-8"?>
 <filterlist>
   <filter majorversion="4" minorversion="0" name="Exclude known Queue Depth Violators" global="true" metricversion="18" containertype="ScsiItl" pregroupbyfilter="true">
     <metricexpression metricversion="18" containertype="ScsiItl">
@@ -237,7 +237,7 @@ AT_CHECK([$abs_srcdir/../src/xpathset zeke-filter-one.xml "//*[[@containertype='
 ],[ignore])
 
 dnl same test, but using java -jar xpath.jar
-AT_CHECK([java -jar $abs_srcdir/../convjars/@PACKAGE@.jar -i zeke-filter-one.xml -r 18 -f "//filter[[@metricversion='21']]/@metricversion" -o zeke-filter-one-test2.xml], 0, [1 replaced.
+AT_CHECK([java -jar $abs_top_builddir/convjars/@PACKAGE@.jar -i zeke-filter-one.xml -r 18 -f "//filter[[@metricversion='21']]/@metricversion" -o zeke-filter-one-test2.xml], 0, [1 replaced.
 ], [])
 
 AT_CHECK([sed -e 's/_FCX_/_FC8_/g' zeke-filter-one-test2.xml | /usr/bin/xmllint -format -], 0, [<?xml version="1.0" encoding="UTF-8"?>
@@ -253,22 +253,22 @@ AT_CHECK([sed -e 's/_FCX_/_FC8_/g' zeke-filter-one-test2.xml | /usr/bin/xmllint 
 </filterlist>
 ],[ignore])
 
-AT_CHECK([java -classpath $abs_srcdir/../convjars/@PACKAGE@.jar org.smallfoot.xpath.XPathSub -r '/.*/XYZ3-Win2k8/g' -T],0,[match: .*
+AT_CHECK([java -classpath $abs_top_builddir/convjars/@PACKAGE@.jar org.smallfoot.xpath.XPathSub -r '/.*/XYZ3-Win2k8/g' -T],0,[match: .*
 replace: XYZ3-Win2k8
 global: true
 ],[])
 
-AT_CHECK([java -classpath $abs_srcdir/../convjars/@PACKAGE@.jar org.smallfoot.xpath.XPathSub -r '@.*@XYZ3-Win2k8@g' -T],0,[match: .*
+AT_CHECK([java -classpath $abs_top_builddir/convjars/@PACKAGE@.jar org.smallfoot.xpath.XPathSub -r '@.*@XYZ3-Win2k8@g' -T],0,[match: .*
 replace: XYZ3-Win2k8
 global: true
 ],[])
 
-AT_CHECK([java -classpath $abs_srcdir/../convjars/@PACKAGE@.jar org.smallfoot.xpath.XPathSub -r '@.*@XYZ3-Win2k8@' -T],0,[match: .*
+AT_CHECK([java -classpath $abs_top_builddir/convjars/@PACKAGE@.jar org.smallfoot.xpath.XPathSub -r '@.*@XYZ3-Win2k8@' -T],0,[match: .*
 replace: XYZ3-Win2k8
 global: false
 ],[])
 
-AT_CHECK([java -classpath $abs_srcdir/../convjars/@PACKAGE@.jar org.smallfoot.xpath.XPathSub -i zeke-filter-one.xml -r '@FCX@FC8@g' -f "//metric/@name" -o zeke-filter-one-test3.xml], 0, [1 replaced.
+AT_CHECK([java -classpath $abs_top_builddir/convjars/@PACKAGE@.jar org.smallfoot.xpath.XPathSub -i zeke-filter-one.xml -r '@FCX@FC8@g' -f "//metric/@name" -o zeke-filter-one-test3.xml], 0, [1 replaced.
 ], [])
 
 AT_CHECK([/usr/bin/xmllint -format zeke-filter-one-test3.xml], 0, [<?xml version="1.0" encoding="UTF-8"?>
@@ -284,7 +284,7 @@ AT_CHECK([/usr/bin/xmllint -format zeke-filter-one-test3.xml], 0, [<?xml version
 </filterlist>
 ],[ignore])
 
-AT_CHECK([java -jar $abs_srcdir/../convjars/@PACKAGE@.jar -i zeke-filter-one.xml -r 18 -f "//filter[[@metricversion='21']]/@metricversion" -R '@FCX@FC8@g' -F "//metric/@name" -o zeke-filter-one-test4.xml], 0, [1 replaced.
+AT_CHECK([java -jar $abs_top_builddir/convjars/@PACKAGE@.jar -i zeke-filter-one.xml -r 18 -f "//filter[[@metricversion='21']]/@metricversion" -R '@FCX@FC8@g' -F "//metric/@name" -o zeke-filter-one-test4.xml], 0, [1 replaced.
 1 substitutions.
 ], [])
 
@@ -301,7 +301,7 @@ AT_CHECK([/usr/bin/xmllint -format zeke-filter-one-test4.xml], 0, [<?xml version
 </filterlist>
 ],[ignore])
 
-AT_CHECK([java -jar $abs_srcdir/../convjars/@PACKAGE@.jar -i zeke-filter-one.xml -r 18 -f "//*[[@metricversion='21']]/@metricversion" -R '@FCX@FC8@g' -F "//metric/@name" -o zeke-filter-one-test4.xml], 0, [2 replaced.
+AT_CHECK([java -jar $abs_top_builddir/convjars/@PACKAGE@.jar -i zeke-filter-one.xml -r 18 -f "//*[[@metricversion='21']]/@metricversion" -R '@FCX@FC8@g' -F "//metric/@name" -o zeke-filter-one-test4.xml], 0, [2 replaced.
 1 substitutions.
 ], [])
 
@@ -404,7 +404,7 @@ AT_DATA([xgEnterpriseProxy.xml],[<?xml version="1.0" standalone="yes"?>
 </PersistedData>
 ])
 
-AT_CHECK([java -jar $abs_srcdir/../convjars/@PACKAGE@.jar -i xgEnterpriseProxy.xml -r 1 -f "//PersistedData/i[[13]]" -r '"proxy.example.com"' -f "//PersistedData/s[[3]]" -r 443 -f "//PersistedData/i[[14]]" -o xgEnterpriseProxy.xml], 0, [replacing: 1
+AT_CHECK([java -jar $abs_top_builddir/convjars/@PACKAGE@.jar -i xgEnterpriseProxy.xml -r 1 -f "//PersistedData/i[[13]]" -r '"proxy.example.com"' -f "//PersistedData/s[[3]]" -r 443 -f "//PersistedData/i[[14]]" -o xgEnterpriseProxy.xml], 0, [replacing: 1
 1 replaced.
 replacing: 1
 1 replaced.
@@ -495,7 +495,7 @@ AT_DATA([EDD_TEXT.xml],[<?xml version="1.0" standalone="yes"?>
 </PersistedData>
 ])
 AT_CHECK([/usr/bin/xmllint -noout EDD_TEXT.xml], 0,[ignore],[ignore])
-AT_CHECK([java -classpath $abs_srcdir/../convjars/@PACKAGE@.jar org.smallfoot.xpath.XPathSet -i EDD_TEXT.xml -r replacementpathname -f "//ScanTask[[@name='test1']]/@file" -o EDD_NEW.xml], 0,[ignore],[ignore])
+AT_CHECK([java -classpath $abs_top_builddir/convjars/@PACKAGE@.jar org.smallfoot.xpath.XPathSet -i EDD_TEXT.xml -r replacementpathname -f "//ScanTask[[@name='test1']]/@file" -o EDD_NEW.xml], 0,[ignore],[ignore])
 AT_CHECK([/usr/bin/xmllint -noout EDD_NEW.xml], 0,[ignore],[ignore])
 AT_CHECK([/usr/bin/xmllint -format EDD_NEW.xml], 0,[<?xml version="1.0" encoding="UTF-8"?>
 <PersistedData>
@@ -531,7 +531,7 @@ AT_CHECK([/usr/bin/xmllint -format EDD_NEW.xml], 0,[<?xml version="1.0" encoding
 </PersistedData>
 ],[ignore])
 
-AT_CHECK([java -classpath $abs_srcdir/../convjars/@PACKAGE@.jar org.smallfoot.xpath.XPathSet -i EDD_TEXT.xml -r bark -f "//ScanTask[[@name='test1']]/@file" -r check -f "//ScanTask[[@name='test2']]/@file" -o EDD_NEW.xml], 0,[ignore],[ignore])
+AT_CHECK([java -classpath $abs_top_builddir/convjars/@PACKAGE@.jar org.smallfoot.xpath.XPathSet -i EDD_TEXT.xml -r bark -f "//ScanTask[[@name='test1']]/@file" -r check -f "//ScanTask[[@name='test2']]/@file" -o EDD_NEW.xml], 0,[ignore],[ignore])
 AT_CHECK([/usr/bin/xmllint -noout EDD_NEW.xml], 0,[ignore],[ignore])
 AT_CHECK([/usr/bin/xmllint -format EDD_NEW.xml], 0,[<?xml version="1.0" encoding="UTF-8"?>
 <PersistedData>
@@ -567,7 +567,7 @@ AT_CHECK([/usr/bin/xmllint -format EDD_NEW.xml], 0,[<?xml version="1.0" encoding
 </PersistedData>
 ],[ignore])
 
-AT_CHECK([java -classpath $abs_srcdir/../convjars/@PACKAGE@.jar org.smallfoot.xpath.XPathSet -i EDD_TEXT.xml -r bark -f "//ScanTask[[@cycle='1']]/@file" -r check -f "//ScanTask[[@cycle='1']]/@file" -o EDD_NEW.xml], 0,[ignore],[ignore])
+AT_CHECK([java -classpath $abs_top_builddir/convjars/@PACKAGE@.jar org.smallfoot.xpath.XPathSet -i EDD_TEXT.xml -r bark -f "//ScanTask[[@cycle='1']]/@file" -r check -f "//ScanTask[[@cycle='1']]/@file" -o EDD_NEW.xml], 0,[ignore],[ignore])
 AT_CHECK([/usr/bin/xmllint -noout EDD_NEW.xml], 0,[ignore],[ignore])
 AT_CHECK([/usr/bin/xmllint -format EDD_NEW.xml], 0,[<?xml version="1.0" encoding="UTF-8"?>
 <PersistedData>
@@ -609,7 +609,7 @@ AT_CLEANUP()
 AT_SETUP(Version Output)
 dnl      --------------
 
-AT_CHECK([java -jar $abs_srcdir/../convjars/@PACKAGE@.jar -V], 0, [@VERSION@-@BUILDID@
+AT_CHECK([java -jar $abs_top_builddir/convjars/@PACKAGE@.jar -V], 0, [@VERSION@-@BUILDID@
 ], [])
 
 AT_CLEANUP()
@@ -620,6 +620,7 @@ AT_SETUP(Doxygen confirmation of marked-up content)
 dnl      -----------------------------------------
 
 AT_CHECK([if test @DOXYGEN@ = missing ; then exit 77; fi])
+AT_CHECK([if test -z "@DO_DOXYGEN_TRUE@"; then exit 77; fi])
 AT_CHECK([make -C $abs_srcdir/.. doc], 0, [ignore],[stderr])
 dnl used to put the errors at the bottom of the output
 AT_CHECK([cat stderr], 0, [],[])
