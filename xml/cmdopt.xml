@@ -11,7 +11,7 @@
 <simplesect kind="see"><para><ulink url="http://www.w3.org/TR/xpath/">http://www.w3.org/TR/xpath/</ulink> </para></simplesect>
 -o save an XML file after editing </para><para>-i read in an XML file for editing </para><para>-H Show a simple help screen as a reminder of options which are understood by the application </para><para><programlisting><codeline><highlight class="normal">java<sp/>-jar<sp/>xpathtool.jar<sp/>--help<sp/></highlight></codeline>
 </programlisting></para><para>-V Show the current release version for reference </para><para><programlisting><codeline><highlight class="normal">java<sp/>-jar<sp/>xpathtool.jar<sp/>-V</highlight></codeline>
-<codeline><highlight class="normal">1.0-20<sp/></highlight></codeline>
+<codeline><highlight class="normal">1.0-22<sp/></highlight></codeline>
 </programlisting> </para></listitem>
 </variablelist>
 </para>    </detaileddescription>

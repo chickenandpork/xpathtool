@@ -16,7 +16,7 @@
         <briefdescription>
 <para>returns the version of the class; used to cause the build-time-detected version and buildid to be available by consumers of the generated xpathtool.jar file </para>        </briefdescription>
         <detaileddescription>
-<para>for example: java -cp xpathtool.jar <ref refid="classorg_1_1smallfoot_1_1xpath_1_1version" kindref="compound">org.smallfoot.xpath.version</ref> 1.0.20</para><para><parameterlist kind="param"><parameteritem>
+<para>for example: java -cp xpathtool.jar <ref refid="classorg_1_1smallfoot_1_1xpath_1_1version" kindref="compound">org.smallfoot.xpath.version</ref> 1.0.22</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>arg</parametername>
 </parameternamelist>
