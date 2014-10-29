@@ -53,9 +53,9 @@ AC_DEFUN([SVN_FIND_JDK],
       JDK="$JAVA_HOME"
     elif test -x "/Library/Java/Home/bin/java"; then
       JDK="/Library/Java/Home"
-    elif test -x "/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/bin/java"; then
+    elif test -x "/usr/lib/jvm/java-1.6.0/bin/java"; then
       dnl need to make this version-insensitive -- readlink -f ?
-      JDK="/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64"
+      JDK="/usr/lib/jvm/java-1.6.0"
     elif test -x "/usr/bin/java"; then
       JDK="/usr"
     elif test -x "/usr/local/bin/java"; then
