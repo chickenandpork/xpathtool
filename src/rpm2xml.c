@@ -12,6 +12,17 @@
 #include <rpm/librpm.h>
 #endif
 
+#if (defined HAVE_RPMLEGACY_H)
+#include <rpmlegacy.h>
+#include <rpmlog.h>
+#define rpmHeaderGetEntry headerGetEntry
+#endif
+#if (defined HAVE_RPM_RPMLEGACY_H)
+#include <rpm/rpmlegacy.h>
+#include <rpm/rpmlog.h>
+#define rpmHeaderGetEntry headerGetEntry
+#endif
+
 #include <stdlib.h>
 #include <rpm/rpmcli.h>
 #include <rpm/rpmdb.h>
@@ -138,7 +149,11 @@ int getAndPrintHeader (char *filename)
     fd = Fopen(filename, "r.ufdio");
     if (fd == NULL || Ferror(fd))
     {
+#if (defined HAVE_RPMLEGACY_H) || (defined HAVE_RPM_RPMLEGACY_H)
+	rpmlog(RPMLOG_ERR, "open of %s failed: %s\n", filename, Fstrerror(fd));
+#else
 	rpmError(RPMERR_OPEN, "open of %s failed: %s\n", filename, Fstrerror(fd));
+#endif
 	if (fd) Fclose(fd);
 
 	return -1;
@@ -202,7 +217,11 @@ int getAndPrintHeader (char *filename)
 	    break;
 
 	default:
+#if (defined HAVE_RPMLEGACY_H) || (defined HAVE_RPM_RPMLEGACY_H)
+	    rpmlog(RPMLOG_ERR, "%s cannot be read (err: %d)\n", filename, ret);
+#else
 	    rpmError(RPMERR_OPEN, "%s cannot be read (err: %d)\n", filename, ret);
+#endif
 	    return -2;
     }
 
