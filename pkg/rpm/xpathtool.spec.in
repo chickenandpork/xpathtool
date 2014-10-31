@@ -7,7 +7,7 @@ Group: Text/Manipulation
 URL: http://tech.chickenandporn.com/
 Source0: http://chickenandporn.com/r/%{name}-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
-BuildArchitectures: noarch
+BuildArchitectures: i386 x86_64
 #BuildRequires: 
 #dammit, I hate the debug packages -- they even makes no sense in a non-executable payload
 %define debug_package %nil
