@@ -8,7 +8,19 @@ URL: http://tech.chickenandporn.com/
 Source0: http://chickenandporn.com/r/%{name}-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildArchitectures: i386 x86_64
-#BuildRequires: 
+%bcond_with rpm2xml
+#underscores for versions?  how is that possibly logical/consistent/better?
+%if 0%{?suse_version}
+BuildRequires: java-1_6_0-devel
+%endif
+# the rest of the world
+%if 0%{?fedora_version} || 0%{?centos_version} || %{_vendor} == redhat
+BuildRequires: java-1.6.0-devel
+%endif
+%if 0%{?with_rpm2xml}
+BuildRequires: rpm-devel
+%endif
+
 #dammit, I hate the debug packages -- they even makes no sense in a non-executable payload
 %define debug_package %nil
 
@@ -20,11 +32,13 @@ Basic XPath-based tools to get and set values in XML files.  These XML Tools and
 %package java
 Summary: XML XPath Manipulation Tools in Java
 Group: Text/Manipulation
+BuildArchitectures: noarch
 
 %description java
 Basic XPath-based tools to get and set values in XML files.  Implemented in Java.  This is a wrapper for the development java jars.
 
 
+%if 0%{?with_rpm2xml}
 %package c
 Summary: XML XPath Manipulation Tools in C
 Group: Text/Manipulation
@@ -32,12 +46,14 @@ Group: Text/Manipulation
 %description c
 Basic XPath-based tools to get and set values in XML files.  Implemented in C.
 
+%endif
+
 
 %prep
 %setup
 
 %build
-%configure %{?configure_additional:%{configure_additional}} && make
+%configure %{?configure_additional:%{configure_additional}} %{with_rpm2xml} && make
 
 %install
 make install DESTDIR=%{buildroot}
@@ -57,6 +73,7 @@ rm -fr %{buildroot}/%{_datadir}/@PACKAGE@/jars
 # exported in java/Makefile.am
 %{_datadir}/@PACKAGE@/@PACKAGE@.jar
 
+%if 0%{?with_rpm2xml}
 %files c
 # exported in src/Makefile.am
 %{_bindir}/check_adhoc
@@ -64,6 +81,7 @@ rm -fr %{buildroot}/%{_datadir}/@PACKAGE@/jars
 %{_bindir}/xpathget
 %{_bindir}/xpathset
 %{_datadir}/@PACKAGE@/xml2rss.xsl
+%endif
 
 
 %changelog
