@@ -122,6 +122,37 @@ AC_SUBST([GETOPTJAR], ${WITH_GETOPTJAR})
 
 
 
+AC_ARG_WITH(rpm2xml,
+[AS_HELP_STRING([--with-rpm2xml],[Enable tools to convert RPM metadata to XML format; default=disabled])],
+[
+    case "$withval" in
+        "no")  WITH_RPM2XML=no  ;;
+        *) WITH_RPM2XML="$withval" ;;
+    esac
+],
+[
+    WITH_RPM2XML=yes
+])
+AM_CONDITIONAL(DO_RPM2XML, test "$WITH_RPM2XML" != no)
+
+
+
+AC_ARG_WITH(remoteurl,
+[AS_HELP_STRING([--with-remoteurl],[Enable remote scp/ssh build of an RPM (user@host); default=disabled])],
+[
+    case "$withval" in
+        "no")  WITH_REMOTEURL=no  ;;
+        *) WITH_REMOTEURL="$withval" ;;
+    esac
+],
+[
+    WITH_REMOTEURL=no
+])
+AM_CONDITIONAL(DO_REMOTEURL, test "$WITH_REMOTEURL" != no)
+AC_SUBST([REMOTEURL], ${WITH_REMOTEURL})
+
+
+
 AC_ARG_WITH(sudopostmove,
 [AS_HELP_STRING([--with-sudopostmove],[Enable sudopostmove of a built RPM; default=disabled])],
 [

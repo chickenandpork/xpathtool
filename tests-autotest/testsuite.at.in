@@ -1,5 +1,42 @@
 AT_INIT()
 
+AT_SETUP(Remote Build)
+dnl      ------------
+
+AT_CHECK([if test @REMOTEURL@ = no ; then exit 77; fi])
+
+AT_CHECK([scp -oStrictHostKeyChecking=no $abs_top_builddir/@PACKAGE@-@VERSION@.tar.bz2 @REMOTEURL@:@PACKAGE@-@VERSION@.tar.bz2], 0, [], [ignore])
+
+AT_CHECK([ssh -oStrictHostKeyChecking=no -A @REMOTEURL@ 'rpmbuild -D "skipcheck=1" --with rpm2xml -ta @PACKAGE@-@VERSION@.tar.bz2'], 0, [stdout],[ignore])
+
+
+AT_CHECK([grep ^Wrote: stdout], 0, [stdout], [stderr])
+
+AT_CHECK([sed -e 's/^.*RPM/RPM/g' -Ee 's/-(yum|zypper)-/-packager-/g' stdout], 0, [stdout], [])
+
+AT_CHECK([sort stdout], 0, [RPMS/noarch/@PACKAGE@-java-@VERSION@-@BUILDID@.noarch.rpm
+RPMS/x86_64/@PACKAGE@-@VERSION@-@BUILDID@.x86_64.rpm
+RPMS/x86_64/@PACKAGE@-c-@VERSION@-@BUILDID@.x86_64.rpm
+RPMS/x86_64/@PACKAGE@-rpm2xml-@VERSION@-@BUILDID@.x86_64.rpm
+RPMS/@PACKAGE@-@VERSION@-@BUILDID@.src.rpm
+], [])
+
+
+AT_CHECK([ssh -oStrictHostKeyChecking=no -A @REMOTEURL@ 'rpmbuild -D "skipcheck=1" --without rpm2xml -ta @PACKAGE@-@VERSION@.tar.bz2'], 0, [stdout],[ignore])
+
+
+AT_CHECK([grep ^Wrote: stdout], 0, [stdout], [stderr])
+
+AT_CHECK([sed -e 's/^.*RPM/RPM/g' -Ee 's/-(yum|zypper)-/-packager-/g' stdout], 0, [stdout], [])
+
+AT_CHECK([sort stdout], 0, [RPMS/noarch/@PACKAGE@-java-@VERSION@-@BUILDID@.noarch.rpm
+RPMS/x86_64/@PACKAGE@-@VERSION@-@BUILDID@.x86_64.rpm
+RPMS/x86_64/@PACKAGE@-c-@VERSION@-@BUILDID@.x86_64.rpm
+RPMS/@PACKAGE@-@VERSION@-@BUILDID@.src.rpm
+], [])
+
+AT_CLEANUP()
+
 
 
 AT_SETUP(java XPathSet)

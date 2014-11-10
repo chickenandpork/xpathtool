@@ -1,6 +1,6 @@
 bin_PROGRAMS = xpathget xpathset
 bin_SCRIPTS = check_adhoc
-if HAVE_RPMBUILD
+if DO_RPM2XML
 bin_PROGRAMS += rpm2xml
 endif
 pkgdata_DATA = xml2rss.xsl

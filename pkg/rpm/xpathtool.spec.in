@@ -17,7 +17,7 @@ BuildRequires: java-1_6_0-openjdk-devel
 %if 0%{?fedora_version} || 0%{?centos_version} || %{_vendor} == redhat
 BuildRequires: java-1.6.0-openjdk-devel
 %endif
-%if 0%{?with_rpm2xml}
+%if %{with rpm2xml}
 BuildRequires: rpm-devel
 %endif
 
@@ -38,7 +38,6 @@ BuildArchitectures: noarch
 Basic XPath-based tools to get and set values in XML files.  Implemented in Java.  This is a wrapper for the development java jars.
 
 
-%if 0%{?with_rpm2xml}
 %package c
 Summary: XML XPath Manipulation Tools in C
 Group: Text/Manipulation
@@ -46,14 +45,26 @@ Group: Text/Manipulation
 %description c
 Basic XPath-based tools to get and set values in XML files.  Implemented in C.
 
+
+
+%if %{with rpm2xml}
+%package rpm2xml
+Summary: XML Conversion for RPM File metadata
+Group: Text/Manipulation
+
+%description rpm2xml
+Converts RPM file metadata to XML markup for further manipulation and indexing
+
 %endif
+
 
 
 %prep
 %setup
 
 %build
-%configure %{?configure_additional:%{configure_additional}} %{with_rpm2xml} && make
+echo with_rpm2xml %{?_with_rpm2xml} without_rpm2xml %{?_without_rpm2xml}
+%configure %{?_without_rpm2xml} %{?configure_additional:%{configure_additional}} && make
 
 %install
 make install DESTDIR=%{buildroot}
@@ -73,14 +84,17 @@ rm -fr %{buildroot}/%{_datadir}/@PACKAGE@/jars
 # exported in java/Makefile.am
 %{_datadir}/@PACKAGE@/@PACKAGE@.jar
 
-%if 0%{?with_rpm2xml}
 %files c
 # exported in src/Makefile.am
 %{_bindir}/check_adhoc
-%{_bindir}/rpm2xml
 %{_bindir}/xpathget
 %{_bindir}/xpathset
 %{_datadir}/@PACKAGE@/xml2rss.xsl
+
+
+%if %{with rpm2xml}
+%files rpm2xml
+%{_bindir}/rpm2xml
 %endif
 
 
