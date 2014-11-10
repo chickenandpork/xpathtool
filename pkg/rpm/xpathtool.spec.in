@@ -8,7 +8,7 @@ URL: http://tech.chickenandporn.com/
 Source0: http://chickenandporn.com/r/%{name}-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildArchitectures: i386 x86_64
-%bcond_with rpm2xml
+%bcond_without rpm2xml
 #underscores for versions?  how is that possibly logical/consistent/better?
 %if 0%{?suse_version}
 BuildRequires: java-1_6_0-openjdk-devel
