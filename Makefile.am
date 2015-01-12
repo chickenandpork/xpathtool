@@ -60,7 +60,7 @@ srpm: dist-bzip2
 	@mkdir -p $$(rpm --eval '%{_srcrpmdir}')
 	@RPMBUILD@ -ts $(PACKAGE)-$(VERSION).tar.bz2
 if DO_SUDOPOSTMOVE
-	mv $$(rpm --eval '%{_srcrpmdir}')/@PACKAGE@-$$(rpm --qf '%{VERSION}\n' -q --specfile @PACKAGE@.spec |head -1)-$$(rpm --qf '%{RELEASE}\n' -q --specfile @PACKAGE@.spec |head -1).src.rpm @SUDOPOSTMOVE@
+	mv -f $$(rpm --eval '%{_srcrpmdir}')/@PACKAGE@-$$(rpm --qf '%{VERSION}\n' -q --specfile @PACKAGE@.spec |head -1)-$$(rpm --qf '%{RELEASE}\n' -q --specfile @PACKAGE@.spec |head -1).src.rpm @SUDOPOSTMOVE@
 endif   DO_SUDOPOSTMOVE
 
 if DO_GITFORMATTING
